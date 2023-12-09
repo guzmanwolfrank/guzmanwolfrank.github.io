@@ -8,11 +8,19 @@
 ------------------------------------------------------------- */
 /* -- GRID  https://github.com/mattberridge/Proportional-Grids/
 ------------------------------------------------------------- */
-body{width:100%;
+
+
+/* --------------------------------------------------------------- */
+
+
+
+body{width:80%;
 	 background: url() no-repeat 40% 0;
 	 background-color: #999;
 	 margin: 0px;
 	}
+
+/* -----------------Containers---------------------- */
 .container {
 	width: 100%;
 	padding-left: 20px;
@@ -34,9 +42,31 @@ body{width:100%;
 	background-color: #b4c1c9;}
 .container3 {width: 90%; margin: 5em auto; max-width: 100%; min-width: 300px;margin-left: 40px;}
 
+.container4 {
+	width: 100%;
+	padding-left: 20px;
+	padding-top: 100px;
+	margin-left: 0px;
+	margin: em auto; 
+	max-width: 100%;
+	min-width: 300px;
+	background-color: #c4cedb;
+	padding-bottom: 200px;
 
 
 
+}
+
+#containeres{
+    position: relative;
+    display: flex;
+	background-color: #dedde6f8;
+	padding: 3em;
+}
+
+/* -----------------End of Containers---------------------- */
+
+/* -----------------Custom---------------------- */
 .body {
 	margin: 0px; 
 	font-size: 13px;
@@ -90,13 +120,17 @@ body{width:100%;
 
 .insert {
 	font-family: Arial, Helvetica, sans-serif;
-	float: left;
-	padding-left: 40px;
+	float: center;
+	padding-left: 180px;
+	padding-right: 180px;
 	font-size: 24px;
 	color: #000;
 }
 
 
+/* ---------------------End Custom------------------------------------------ */
+
+/* --------------------------------Theirs--------------------------------------- */
 figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block
@@ -141,7 +175,7 @@ label{cursor:pointer}
 button, input{line-height:normal; *overflow:visible}
 
 
--------------------------------- */
+/* -----------------End---------------------- */
 
 /* -- FORMS 
 ------------------------------------------------------------- */
@@ -217,38 +251,10 @@ h1 a:hover,h2 a:hover,h3 a:hover,h4 a:hover,h5 a:hover,h6 a:hover{color:#0078CF;
 /* -- GRID  https://github.com/mattberridge/Proportional-Grids/
 ------------------------------------------------------------- */
 body{width:100%; background: url() no-repeat 40% 0;}
-.container {
-	width: 100%;
-	padding-left: 20px;
-	padding-top: 100px;
-	margin-left: 0px;
-	margin: em auto; 
-	max-width: 100%;
-	min-width: 300px;
-	background-color: #cbd2d4;
-}
-.container2 {
-	width: 100%;
-	padding-left: 20px;
-	padding-top: 100px;
-	margin-left: 0px;
-	margin: em auto; 
-	max-width: 100%;
-	min-width: 300px;
-	background-color: #333;}
-
-
-.container3 {width: 90%; margin: 5em auto; max-width: 100%; min-width: 300px;margin-left: 40px;}
 
 
 
 
-#containeres{
-    position: relative;
-    display: flex;
-	background-color: #dedde6f8;
-	padding: 3em;
-}
 .grid-wrap {
   margin-left: -3em; /* the same as your gutter */
   overflow: hidden;
