@@ -45,13 +45,13 @@ body{width:80%;
 .container4 {
 	width: 100%;
 	padding-left: 20px;
-	padding-top: 100px;
+	padding-top: 30px;
 	margin-left: 0px;
-	margin: em auto; 
+	margin: 0px; 
 	max-width: 100%;
 	min-width: 300px;
-	background-color: #c4cedb;
-	padding-bottom: 200px;
+	background-color: #6e7470;
+	padding-bottom: 10px;
 
 
 
@@ -81,7 +81,7 @@ body{width:80%;
 	 	float: left;
 		color: #333;
 		padding-top: 10px;
-		padding-left: 10px;
+		padding-left: 20px;
 	}
 
 .menunav ul {
@@ -115,7 +115,11 @@ body{width:80%;
 	  }
 	  
 .menunav li a:hover {
-		background-color: #ddd;
+		background-color: #14e26a;
+}
+
+.name  a:hover {
+	background-color: #14e26a;
 }
 
 .insert {
@@ -375,7 +379,7 @@ header .arrow {color: #999; font-style: italic;}
 ------------------------------------------------------------- */
 footer  { color: #292828; margin-bottom: 7em;}
 footer nav ul { float: right; overflow: hidden; }
-footer a {color: #999;}
+footer a {color: #ffffff;}
 footer li { float: left; margin-right: 1em; padding-right: 1em; border-right: 1px solid #DDD; font-size: 0.8em; }
 footer li:last-child { margin-right: 0; padding-right: 0; border-right: none; }
 .up a { display: block; text-align: center; margin: 0 auto; }
