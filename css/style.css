@@ -6,21 +6,107 @@
 	Proportional grids by Boon (http://builtbyboon.com),
 	CSS Tricks (css-tricks.com).
 ------------------------------------------------------------- */
-
-
-
-/* -------------------------------------------------------------
-
+/* -- GRID  https://github.com/mattberridge/Proportional-Grids/
 ------------------------------------------------------------- */
+body{width:100%;
+	 background: url() no-repeat 40% 0;
+	 background-color: #999;
+	 margin: 0px;
+	}
+.container {
+	width: 100%;
+	padding-left: 20px;
+	padding-top: 100px;
+	margin-left: 0px;
+	margin: em auto; 
+	max-width: 100%;
+	min-width: 300px;
+	background-color: #dbdfe4;
+}
+.container2 {
+	width: 100%;
+	padding-left: 20px;
+	padding-top: 100px;
+	margin-left: 0px;
+	margin: em auto; 
+	max-width: 100%;
+	min-width: 300px;
+	background-color: #b4c1c9;}
+.container3 {width: 90%; margin: 5em auto; max-width: 100%; min-width: 300px;margin-left: 40px;}
+
+
+
+
+.body {
+	margin: 0px; 
+	font-size: 13px;
+	line-height: 1.6; 
+
+	 }
+
+.name {
+		font-size: 18px;
+		font-weight:bold;
+		margin-right: auto; /* Adds space to the right */
+	 	float: left;
+		color: #333;
+		padding-top: 10px;
+		padding-left: 10px;
+	}
+
+.menunav ul {
+		display: flex;
+	  }
+	  
+
+.menunav {
+	float:right;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #333;
+	padding-top: 10px;
+	font-weight:bold;
+
+}
+.menunav li {
+		margin-left: 20px; /* Adds space between menu items */
+		font-weight:bold;
+
+	
+	}
+	  
+.menunav li a {
+		text-decoration: none;
+		color: #333;
+		padding: 5px 10px;
+		padding-right: 10px;
+		display: inline-block;
+		font-weight:bold;
+
+	  }
+	  
+.menunav li a:hover {
+		background-color: #ddd;
+}
+
+.insert {
+	font-family: Arial, Helvetica, sans-serif;
+
+
+
+}
+
+
 figcaption, figure, 
-footer, header, hgroup, menu, nav, section {display: block}
+footer, header, hgroup, menu, nav, section {
+	display: block
+}
  { display: inline-block; *display: inline; *zoom: 1; }
-audio:not([controls]) { display: none; }
+{ display: none; }
 html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
 :hover, :focus, :active { outline: none; }
 
 
-html, button, input, select, textarea {
+html, input, textarea {
 	font-family: "Open sans", "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
 	font-weight: 400; /* normal */
 	color: #504b4b; 
@@ -29,7 +115,6 @@ html, button, input, select, textarea {
 	font-smoothing: antialiased;
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.004);}
 
-body { margin: 0; font-size: 13px; line-height: 1.6; }
 
 a { color: #0078CF; font-weight: normal;
 	cursor: pointer;  text-decoration: none;
@@ -45,42 +130,14 @@ p:last-child {margin-bottom: 0;}
 
 a:visited{opacity:0.9;}
 a:active, a:focus{position:relative;top:1px;}
-abbr[title]{border-bottom:1px dotted}
-dfn{font-style:italic}
-hr{display:block; height:1px; border:0; border-top:1px solid #ddd; margin:1em 0; padding:0}
-pre, code, kbd, samp{font-family:monospace,monospace; _font-family:'courier new',monospace; font-size:1em}
-q{quotes:none}
-q:before, q:after{content:""; content:none}
-blockquote { margin: 1em 1em 1em 0; padding: 1em; border-left: 1px solid #DDD; font-style: italic; color: #999;}
-blockquote p {font-size: 1.1em;line-height: 2em;margin-bottom: 0;}
-blockquote small {display: block;font-size: 1em;line-height: 1.6em;color: #bfbfbf; text-align: right;}
-blockquote small:before {content: '\2014 \00A0';}
-b, strong{font-weight:700}
-small{font-size:85%; color: #999;}
-sub, sup{font-size:75%; line-height:0; position:relative; vertical-align:baseline}
-sup{top:-0.5em}
-sub{bottom:-0.25em}
-dd{margin:0 0 0 40px} dt{font-weight: 700;}
+
+
 ul, ol{list-style:none; list-style-image:none; margin:0; padding:0;}
 img{border:0; -ms-interpolation-mode:bicubic; vertical-align:middle}
-svg:not(:root){overflow:hidden}
 figure{margin:0}
 form{margin:0}
-fieldset{border:0; margin:0; padding:0}
 label{cursor:pointer}
-legend{border:0; *margin-left:-7px; padding:0;white-space: normal;}
-button, input, select, textarea{font-size:100%; margin:0; vertical-align:baseline; *vertical-align:middle}
 button, input{line-height:normal; *overflow:visible}
-table button, table input{*overflow:auto}
-button, input[type="button"], input[type="reset"], input[type="submit"]{cursor:pointer; -webkit-appearance:button}
-input[type="checkbox"], input[type="radio"]{box-sizing:border-box}
-input[type="search"]{-webkit-appearance:textfield; -moz-box-sizing:content-box; -webkit-box-sizing:content-box; box-sizing:content-box}
-input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}
-button::-moz-focus-inner, input::-moz-focus-inner{border:0; padding:0}
-textarea{overflow:auto; vertical-align:top; resize:vertical}
-table{border-collapse:collapse; border-spacing:0}
-td{vertical-align:top}
-.chromeframe { margin: 1em 0; background: red; color: black; padding: 1em; }
 
 
 -------------------------------- */
@@ -123,56 +180,6 @@ label.error { color: #0078CF; margin: 0.5em 0 0 0.5em; font-weight: normal; font
 
 
 
-/* -- BUTTONS 
-------------------------------------------------------------- */
-.button, input[type="submit"], button, .toggle-title {
-	color: #666;
-	font-size: 1.1em;
-	font-weight: normal;
-	padding: 0.6em 1.2em;
-	text-shadow: 0 1px 0 #fff;
-	border: solid 1px #ddd;
-	text-decoration: none;
-	cursor: pointer;
-	
-	background: #efefef; /* Old browsers */
-	background: -moz-linear-gradient(top,  #f6f6f6 0%, #efefef 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f6f6f6), color-stop(100%,#efefef)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  #f6f6f6 0%,#efefef 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  #f6f6f6 0%,#efefef 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  #f6f6f6 0%,#efefef 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  #f6f6f6 0%,#efefef 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f6f6', endColorstr='#efefef',GradientType=0 ); /* IE6-9 */
-		
-	-webkit-border-radius: 2px;
-	-moz-border-radius: 2px;
-	-o-border-radius: 2px;
-	-ms-border-radius: 2px;
-	-khtml-border-radius: 2px;
-	border-radius: 2px;
-	
-	-webkit-transition: 0.1s linear all;
-	-moz-transition: 0.1s linear all;
-	-ms-transition: 0.1s linear all;
-	-o-transition: 0.1s linear all;
-	transition: 0.1s linear all; }
-.button:hover, input[type="submit"]:hover, button:hover, .toggle-title:hover {
-	color: #333;
-	text-decoration: none;
-	border-color: #BBB;
-	-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-	-webkit-box-shadow:0 1px 2px rgba(0, 0, 0, 0.1);
-	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-	background: 0 100%;}
-.button:focus, input[type="submit"]:focus, button:focus, .toggle-title:focus {
-	color: #333;
-	border-color: #BBB;}
-.button:active, input[type="submit"]:active, button:active, .toggle-title:active {
-	color: #000;
-	background: #F5F5F5;
-	border-color: #444;
-	position: relative; top:1px;}
-
 
 
 /* -- TYPO
@@ -209,8 +216,27 @@ h1 a:hover,h2 a:hover,h3 a:hover,h4 a:hover,h5 a:hover,h6 a:hover{color:#0078CF;
 /* -- GRID  https://github.com/mattberridge/Proportional-Grids/
 ------------------------------------------------------------- */
 body{width:100%; background: url() no-repeat 40% 0;}
-.container {width: 100%; margin: 5em auto; max-width: 100%; min-width: 300px;}
-.container2{width: 100%;padding-left: 20px;padding-top: 100px;margin-left: 0px; margin: em auto; max-width: 100%; min-width: 300px;background-color: #333;}
+.container {
+	width: 100%;
+	padding-left: 20px;
+	padding-top: 100px;
+	margin-left: 0px;
+	margin: em auto; 
+	max-width: 100%;
+	min-width: 300px;
+	background-color: #cbd2d4;
+}
+.container2 {
+	width: 100%;
+	padding-left: 20px;
+	padding-top: 100px;
+	margin-left: 0px;
+	margin: em auto; 
+	max-width: 100%;
+	min-width: 300px;
+	background-color: #333;}
+
+
 .container3 {width: 90%; margin: 5em auto; max-width: 100%; min-width: 300px;margin-left: 40px;}
 
 
@@ -288,19 +314,36 @@ a img:hover {
     
     
     
-/* -------------------------------------------------------------
-======	PAGES
-------------------------------------------------------------- */
+
     
 /* -- HEADER
 ------------------------------------------------------------- */
 header#navtop { margin-bottom: 1em; clear: both; overflow: hidden; background-color: #ffffff; color: #ffffff;}
-    header nav ul { float: left; overflow: hidden; padding: 0 3em 0 2em; border-left: 1px solid #ddd; line-height: 2em; }
 nav a, menu a { text-decoration: none; color: #555; }
 .navactive { color: #0078CF }
 .logo {margin-bottom: 1em;}
 .logo:hover {background: none;}
-		
+.menu {
+	display: flex;
+	list-style: none; /* Removes default list styling */
+	padding: 0;
+	margin: 0;
+  }
+  
+  .menu li {
+	margin-left: 20px; /* Adds space between menu items */
+  }
+  
+  .menu li a {
+	text-decoration: none;
+	color: #000;
+	padding: 5px 10px;
+	display: inline-block;
+  }
+  
+  .menu li a:hover {
+	background-color: #ddd;
+  }		
 		
 /* -- GENERAL 
 ------------------------------------------------------------- */
@@ -311,9 +354,15 @@ nav a, menu a { text-decoration: none; color: #555; }
 header .arrow {color: #999; font-style: italic;}
 .arrow:hover {color: #0078CF; }
 .header {
+	display: flex; /* Enables flexbox layout */
+	justify-content: right; /* Aligns elements horizontally left */
+	align-items: center; /* Aligns elements vertically */
+	padding: 10px 20px; /* Adds padding */
+	background-color: #f1f1f1; /* Sets background color */
+  }
+  
 
 
-}
 
 /* -- FOOTER
 ------------------------------------------------------------- */
@@ -324,18 +373,6 @@ footer li { float: left; margin-right: 1em; padding-right: 1em; border-right: 1p
 footer li:last-child { margin-right: 0; padding-right: 0; border-right: none; }
 .up a { display: block; text-align: center; margin: 0 auto; }
 
-
-/* -- HOME-PAGE
-------------------------------------------------------------- */
-
-
-/* -------------------------------------------------------------
-======	MISC
-------------------------------------------------------------- */
-
-.ir{display:block; border:0; text-indent:-999em; overflow:hidden; background-color:transparent; background-repeat:no-repeat; text-align:left; direction:ltr; *line-height: 0;}
-.ir br{display:none}
-.hidden{display:none !important; visibility:hidden}
 
 
 
