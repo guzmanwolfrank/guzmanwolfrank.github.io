@@ -115,18 +115,18 @@ body{width:80%;
 	  }
 	  
 .menunav li a:hover {
-		background-color: #f07c0f;
+		background-color: #ffff;
 }
 
 .name  a:hover {
-	background-color: #f07c0f;
+	background-color: #ffff;
 }
 
 .insert {
 	font-family: Arial, Helvetica, sans-serif;
 	float: center;
-	padding-left: 180px;
-	padding-right: 180px;
+	padding-left: 10%;
+	padding-right: 10px;
 	font-size: 24px;
 	color: #000;
 }
