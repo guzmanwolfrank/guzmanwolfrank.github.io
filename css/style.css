@@ -124,7 +124,7 @@ body{width:80%;
 .insert {
 	font-family: Arial, Helvetica, sans-serif;
 	float: center;
-	padding-left: 10%;
+	padding-left: 10px;
 	padding-right: 10px;
 	font-size: 24px;
 	color: #000;
