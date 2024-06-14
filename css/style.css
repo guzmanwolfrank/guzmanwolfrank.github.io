@@ -704,7 +704,7 @@ body.push-side #ascrail2000-hr {
 
 .copyright {
 	font-size: 13px;
-	color: rgba(130, 130, 130, 0.29);
+	color: #ffff;
 	position: fixed;
 	height: 80px;
 	width: 614px;
@@ -716,7 +716,7 @@ body.push-side #ascrail2000-hr {
 }
 
 .copyright a {
-	color: rgba(130, 130, 130, 0.29);
+	color:#ffff;
 	text-decoration: underline;
 }
 
