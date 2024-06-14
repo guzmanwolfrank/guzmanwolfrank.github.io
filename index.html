@@ -1766,9 +1766,10 @@
 						<p>Cloud Architect & Data Engineer</p>
 					</a>
 					<div class="about-info">
-						<h2>Python / SQL <br>
+						<h2>Python, SQL <br><br>
 					 AWS, Azure,<br>
-						Snowflake*</h2>
+						Snowflake <br><br>Tableau Power BI Looker</h2>
+						<br>
 						<p>
 							I am Wolfrank Guzman, a remote Data Engineer & Cloud Architect. <br><br>  I specialize in designing and optimizing data pipelines and cloud solutions using AWS services.<br><br> My expertise includes leading data migration projects, developing automated reporting solutions, and creating custom dashboards for better decision-making. <br>
 							<br>
@@ -1796,27 +1797,48 @@
 				<div class="hero-section">
 					<div class="hero-scroll">
 						<div class="hero-track">
+							
+							<!-- Image Section and Div Class start -->
 							<div class="hs-item set-bg" data-setbg="img/hero/1.jpg">
+								<a href="https://github.com/guzmanwolfrank/QuantTrading" target="_blank" title="QuantTrading GitHub Repository">
+									<div class="hs-item set-bg" data-setbg="img/hero/1.jpg"></div>
+								</a>					
 								<div class="hs-info">
-									<h5>Python</h5>
-									<p>Quant Trading Algorithms</p>
+									<h5><a href="https://github.com/guzmanwolfrank/QuantTrading" target="_blank" title="Quant Trading Algorithms">Python</a></h5>
+									<p><a href="https://github.com/guzmanwolfrank/QuantTrading" target="_blank" title="Quant Trading Algorithms">Quant Trading Algorithms</a> </p>
+
 									<a href="https://github.com/guzmanwolfrank/QuantTrading"><img src="img/arrow-right.png" alt=""></a>
 								</div>
 							</div>
-							<div class="hs-item set-bg" data-setbg="img/hero/2.jpg">
-								<div class="hs-info">
-									<h5>Cloud Architecture</h5>
-									<p>AWS Cloud </p>
-									<a href="https://github.com/guzmanwolfrank/AWS-Cloud"><img src="img/arrow-right.png" alt=""></a>
+							<!-- Image Section and Div Class start -->
+							  
+							 <div class="hs-item set-bg" data-setbg="img/hero/2.jpg">
+								<a href="https://github.com/guzmanwolfrank/AWS-Cloud" target="_blank" title="Cloud GitHub Repository">
+									<div class="hs-item set-bg" data-setbg="img/hero/2.jpg"></div>
+								</a>					
+									<div class="hs-info">
+									<h5><a href="https://github.com/guzmanwolfrank/AWS-Cloud" target="_blank" title="Cloud Github Repository">AWS Cloud</a></h5>
+									<p><a href="https://github.com/guzmanwolfrank/AWS-Cloud" target="_blank" title="Cloud Github Repository">Cloud Architecture Programs</a> </p>
+
+										<a href="https://github.com/guzmanwolfrank/AWS-Cloud"><img src="img/arrow-right.png" alt=""></a>
 								</div>
 							</div>
+							<!-- Image Section and Div Class start  "https://github.com/guzmanwolfrank/Data-SQL" -->
+
+									  
 							<div class="hs-item set-bg" data-setbg="img/hero/3.jpg">
-								<div class="hs-info">
-									<h5>SQL </h5>
-									<p>Queries, Dashboards & Database Management</p>
-									<a href="https://github.com/guzmanwolfrank/Data-SQL"><img src="img/arrow-right.png" alt=""></a>
+								<a href="https://github.com/guzmanwolfrank/Data-SQL" target="_blank" title="SQL">
+									<div class="hs-item set-bg" data-setbg="img/hero/3.jpg"></div>
+								</a>					
+									<div class="hs-info">
+									<h5><a href="https://github.com/guzmanwolfrank/Data-SQL" target="_blank" title="SQL">SQL</a></h5>
+									<p><a href="https://github.com/guzmanwolfrank/Data-SQL" target="_blank" title="SQL">Queries, Dashboards & Database Management</a> </p>
+
+										<a href="https://github.com/guzmanwolfrank/Data-SQL"><img src="img/arrow-right.png" alt=""></a>
 								</div>
 							</div>
+							<!-- Image Section and Div Class end -->
+
 						</div>
 					</div>
 				</div>
@@ -1837,6 +1859,12 @@
 	<script src="js/circle-progress.min.js"></script>
 	<script src="js/jquery.magnific-popup.min.js"></script>
 	<script src="js/main.js"></script>
-
+	<script>
+		// JavaScript to set the background image dynamically
+		document.querySelectorAll('.set-bg').forEach(function(element) {
+		  var bg = element.getAttribute('data-setbg');
+		  element.style.backgroundImage = 'url(' + bg + ')';
+		});
+	  </script>
 	</body>
 </html>
