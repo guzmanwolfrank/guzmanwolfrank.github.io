@@ -1051,7 +1051,28 @@
 	 color: #242424;
  }
  
-
+ .copyright {
+	 font-size: 13px;
+	 color: rgba(130, 130, 130, 0.29);
+	 position: fixed;
+	 height: 80px;
+	 width: 614px;
+	 left: 0;
+	 bottom: 0;
+	 background: #fff;
+	 padding-left: 145px;
+	 padding-top: 20px;
+ }
+ 
+ .copyright a {
+	 color: rgba(130, 130, 130, 0.29);
+	 text-decoration: underline;
+ }
+ 
+ .copyright i {
+	 color: rgba(204, 17, 17, 0.29);
+ }
+ 
  /*------------------
  Hero section
   ---------------------*/
@@ -1088,7 +1109,7 @@
  
  .nicescroll-rails.nicescroll-rails-hr,
  #ascrail2000-hr {
-	 max-width: calc(90% - 500px);
+	 max-width: calc(100% - 717px);
 	 overflow: hidden;
  }
  
@@ -1328,10 +1349,41 @@
 	 .hs-item .hs-info img {
 		 width: auto;
 	 }
-
+	 .video-section {
+		 height: 400px;
+	 }
+	 .about-section,
+	 .blog-page,
+	 .portfolio-section,
+	 .contact-section,
+	 .elements-section {
+		 padding: 0 15px;
+		 margin: 0;
+	 }
+	 .blog-post-item:last-child {
+		 margin-bottom: 0;
+	 }
+	 .contact-text-warp {
+		 padding-left: 0;
+	 }
+	 .map {
+		 height: 600px;
+	 }
+	 .copyright {
+		 position: relative;
+		 left: 0;
+		 bottom: 0;
+		 padding: 60px 15px 50px;
+		 text-align: center;
+		 width: 100%;
+	 }
 	 .nicescroll-rails.nicescroll-rails-hr,
 	 #ascrail2000-hr {
 		 max-width: calc(100% - 50px);
+	 }
+	 .blog-content {
+		 width: calc(100% - 30px);
+		 margin-left: 15px;
 	 }
 	 .hero-track .owl-nav {
 		 padding-top: 30px;
@@ -1374,8 +1426,15 @@
 	 .about-info h2 {
 		 font-size: 34px;
 	 }
-
-	
+	 .blog-content {
+		 width: calc(100% - 10px);
+		 margin-left: 5px;
+		 padding: 40px 15px;
+	 }
+	 .comments-list .blog-avator {
+		 float: none;
+		 margin-bottom: 30px;
+	 }
 	 .portfolio-item .pi-info {
 		 width: 170px;
 		 padding: 15px 0 5px 0;
@@ -1469,29 +1528,28 @@
 									<div class="hs-item set-bg" data-setbg="img/hero/1.jpg"></div>
 								</a>					
 								<div class="hs-info">
-									<h5><a href="https://github.com/guzmanwolfrank/QuantTrading" target="_blank" title="Quant Trading Algorithms">Quant</a></h5>
+									<h5><a href="https://github.com/guzmanwolfrank/QuantTrading" target="_blank" title="Quant Trading Algorithms">Python</a></h5>
 									<p><a href="https://github.com/guzmanwolfrank/QuantTrading" target="_blank" title="Quant Trading Algorithms">Quant Trading Algorithms</a> </p>
 
 									<a href="https://github.com/guzmanwolfrank/QuantTrading"><img src="img/arrow-right.png" alt=""></a>
 								</div>
 							</div>
 							<!-- Image Section and Div Class start -->
-							 	   <!-- Image Section and Div Class start -->
 							  
-									<div class="hs-item set-bg" data-setbg="img/hero/2.jpg">
-										<a href="https://github.com/guzmanwolfrank/AWS-Cloud" target="_blank" title="Cloud GitHub Repository">
-											<div class="hs-item set-bg" data-setbg="img/hero/2.jpg"></div>
-										</a>					
-											<div class="hs-info">
-											<h5><a href="https://github.com/guzmanwolfrank/AWS-Cloud" target="_blank" title="Cloud Github Repository">AWS Cloud</a></h5>
-											<p><a href="https://github.com/guzmanwolfrank/AWS-Cloud" target="_blank" title="Cloud Github Repository">Cloud Architecture Programs</a> </p>
-		
-												<a href="https://github.com/guzmanwolfrank/AWS-Cloud"><img src="img/arrow-right.png" alt=""></a>
-										</div>
-									</div>
-									<!-- Image Section and Div Class start  "https://github.com/guzmanwolfrank/Data-SQL" -->
-							 <!-- Image Section and Div Class start -->
-														  
+							 <div class="hs-item set-bg" data-setbg="img/hero/2.jpg">
+								<a href="https://github.com/guzmanwolfrank/AWS-Cloud" target="_blank" title="Cloud GitHub Repository">
+									<div class="hs-item set-bg" data-setbg="img/hero/2.jpg"></div>
+								</a>					
+									<div class="hs-info">
+									<h5><a href="https://github.com/guzmanwolfrank/AWS-Cloud" target="_blank" title="Cloud Github Repository">AWS Cloud</a></h5>
+									<p><a href="https://github.com/guzmanwolfrank/AWS-Cloud" target="_blank" title="Cloud Github Repository">Cloud Architecture Programs</a> </p>
+
+										<a href="https://github.com/guzmanwolfrank/AWS-Cloud"><img src="img/arrow-right.png" alt=""></a>
+								</div>
+							</div>
+							<!-- Image Section and Div Class start  "https://github.com/guzmanwolfrank/Data-SQL" -->
+
+									  
 							<div class="hs-item set-bg" data-setbg="img/hero/3.jpg">
 								<a href="https://github.com/guzmanwolfrank/Data-SQL" target="_blank" title="SQL">
 									<div class="hs-item set-bg" data-setbg="img/hero/3.jpg"></div>
@@ -1503,7 +1561,7 @@
 										<a href="https://github.com/guzmanwolfrank/Data-SQL"><img src="img/arrow-right.png" alt=""></a>
 								</div>
 							</div>
-
+							<!-- Image Section and Div Class end -->
 
 						</div>
 					</div>
@@ -1511,7 +1569,9 @@
 			</div>
 			<!-- Page end -->
 		</div>
-
+		<div class="copyright"><p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib & Edited by Wolfrank Guzman</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p></div>
 	</div>
 	<!-- Main section end -->
 	
