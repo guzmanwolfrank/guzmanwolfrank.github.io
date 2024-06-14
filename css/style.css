@@ -80,7 +80,7 @@ a {
 /* Ensure other pseudo-classes like hover and active don't change the color */
 a:hover,
 a:active {
-    color: black;
+    color: rgb(27, 101, 199);
 }
 a:hover,
 a:focus {
@@ -652,15 +652,33 @@ body.push-side #ascrail2000-hr {
 
 .about-info h2 {
 	font-weight: 900;
-	font-size: 48px;
-	margin-bottom: 40px;
+	font-size: 38px;
+	margin-bottom: 20px;
 	line-height: 1.1;
-	font-family: "Playfair Display", serif;
+	font-family: "Open Sans", serif;
+}
+
+.about-info a, h3 {
+	font-weight: 900;
+	font-size: 28px;
+	margin-bottom: 20px;
+	line-height: 1.1;
+	font-family: "Open Sans", serif;
+	color: #3377af;
+}
+
+.about-info a, h3 {
+	font-weight: 900;
+	font-size: 28px;
+	margin-bottom: 20px;
+	line-height: 1.1;
+	font-family: "Open Sans", serif;
+	color: #3377af;
 }
 
 .contact-info {
 	list-style: none;
-	margin-bottom: 65px;
+	margin-bottom: 35px;
 	position: relative;
 }
 
@@ -1333,6 +1351,10 @@ Responsive
 	}
 	.about-info h2 {
 		font-size: 34px;
+	}
+	.about-info h3,a,p {
+		font-size: 34px;
+		
 	}
 	.blog-content {
 		width: calc(100% - 10px);
