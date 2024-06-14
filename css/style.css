@@ -647,8 +647,15 @@ body.push-side #ascrail2000-hr {
 }
 
 .about-info {
-	margin-bottom: 80px;
+	margin-bottom: 40px;
+    display: block;
 }
+
+.about-info p {
+	margin-bottom: 40px;
+    display: block;
+}
+
 
 .about-info h2 {
 	font-weight: 900;
