@@ -62,7 +62,26 @@ button:focus,
 textarea:focus {
 	outline: none;
 }
+/* Set the default color of all links to black */
+a {
+    color: black;
+}
 
+/* Optionally, you can set the visited state to black as well */
+a:visited {
+    color: black;
+}
+
+/* If you want to remove the underline from links, you can do this */
+a {
+    text-decoration: none;
+}
+
+/* Ensure other pseudo-classes like hover and active don't change the color */
+a:hover,
+a:active {
+    color: rgb(27, 101, 199);
+}
 a:hover,
 a:focus {
 	text-decoration: none;
@@ -602,12 +621,12 @@ body.push-side #ascrail2000-hr {
 }
 
 .main-sidebar .mb-warp {
-	padding: 151px 95px 100px 145px;
+	padding: 151px 95px 100px 100px;
 }
 
 .site-logo {
 	display: block;
-	margin-bottom: 80px;
+	margin-bottom: 20px;
 }
 
 .site-logo h2 {
@@ -633,15 +652,33 @@ body.push-side #ascrail2000-hr {
 
 .about-info h2 {
 	font-weight: 900;
-	font-size: 48px;
-	margin-bottom: 40px;
+	font-size: 38px;
+	margin-bottom: 20px;
 	line-height: 1.1;
-	font-family: "Playfair Display", serif;
+	font-family: "Open Sans", serif;
+}
+
+.about-info a, h3 {
+	font-weight: 900;
+	font-size: 24px;
+	margin-bottom: 0px;
+	line-height: 1;
+	font-family: "Open Sans", serif;
+	color: #3377af;
+}
+
+.about-info a, h3 {
+	font-weight: 900;
+	font-size: 28px;
+	margin-bottom: 20px;
+	line-height: 1.1;
+	font-family: "Open Sans", serif;
+	color: #3377af;
 }
 
 .contact-info {
 	list-style: none;
-	margin-bottom: 65px;
+	margin-bottom: 25px;
 	position: relative;
 }
 
@@ -1314,6 +1351,10 @@ Responsive
 	}
 	.about-info h2 {
 		font-size: 34px;
+	}
+	.about-info h3,a,p {
+		font-size: 34px;
+		
 	}
 	.blog-content {
 		width: calc(100% - 10px);
