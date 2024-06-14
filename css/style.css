@@ -621,12 +621,12 @@ body.push-side #ascrail2000-hr {
 }
 
 .main-sidebar .mb-warp {
-	padding: 151px 95px 100px 145px;
+	padding: 151px 95px 100px 100px;
 }
 
 .site-logo {
 	display: block;
-	margin-bottom: 80px;
+	margin-bottom: 20px;
 }
 
 .site-logo h2 {
@@ -660,9 +660,9 @@ body.push-side #ascrail2000-hr {
 
 .about-info a, h3 {
 	font-weight: 900;
-	font-size: 28px;
-	margin-bottom: 20px;
-	line-height: 1.1;
+	font-size: 24px;
+	margin-bottom: 0px;
+	line-height: 1;
 	font-family: "Open Sans", serif;
 	color: #3377af;
 }
@@ -678,7 +678,7 @@ body.push-side #ascrail2000-hr {
 
 .contact-info {
 	list-style: none;
-	margin-bottom: 35px;
+	margin-bottom: 25px;
 	position: relative;
 }
 
