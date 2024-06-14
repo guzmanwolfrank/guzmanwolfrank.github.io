@@ -1,11 +1,4 @@
-/* ==================================
--------------------------------------
-  NISSA - PHOTOGRAPHY STUDIO TEMPLATE
-  Version: 1.0
- ------------------------------------
- ====================================*/
 
- 
 /*----------------------------------------*/
 /* Template default CSS
 /*----------------------------------------*/
@@ -69,7 +62,26 @@ button:focus,
 textarea:focus {
 	outline: none;
 }
+/* Set the default color of all links to black */
+a {
+    color: black;
+}
 
+/* Optionally, you can set the visited state to black as well */
+a:visited {
+    color: black;
+}
+
+/* If you want to remove the underline from links, you can do this */
+a {
+    text-decoration: none;
+}
+
+/* Ensure other pseudo-classes like hover and active don't change the color */
+a:hover,
+a:active {
+    color: black;
+}
 a:hover,
 a:focus {
 	text-decoration: none;
