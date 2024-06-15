@@ -1227,7 +1227,7 @@ Responsive
 		margin-bottom: 40px;
 	}
 	.site-logo h2 {
-		font-size: 70px;
+		font-size: 40px;
 		line-height: 70px;
 	}
 	.site-logo p {
@@ -1334,7 +1334,7 @@ Responsive
 		margin-bottom: 50px;
 	}
 	.site-logo h2 {
-		font-size: 60px;
+		font-size: 40px;
 		line-height: 70px;
 	}
 	.site-logo p {
@@ -1350,10 +1350,10 @@ Responsive
 		margin-bottom: 5px;
 	}
 	.about-info h2 {
-		font-size: 34px;
+		font-size: 20px;
 	}
 	.about-info h3,a,p {
-		font-size: 34px;
+		font-size: 20px;
 		
 	}
 	.blog-content {
@@ -1376,6 +1376,9 @@ Responsive
 
 @media only screen and (min-device-width: 428px) and (max-device-width: 428px) and (min-device-height: 926px) and (max-device-height: 926px) and (orientation: portrait) {
     /* CSS rules for portrait orientation */
+h5 {
+	font-size: 18px;
+}
 }
 
 
