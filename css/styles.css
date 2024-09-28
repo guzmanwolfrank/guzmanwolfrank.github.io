@@ -6,49 +6,114 @@ body {
   }
   
   /* Header Styles */
-  header {
+.header {
     background-color: #333;
     color: #fff;
     padding: 10px;
   }
   
-  nav ul {
+  
+/* Container */
+.container{
+    width: 80%;
+    margin: auto 0;
+    display: flex;
+  }
+/****navbar****/
+.navbar{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #c54031;
+  }
+/**navcolumn1 desktop **/
+  .navcolumn1 img {
+    width: 60px;
+    height: auto;
+    padding-left: 10px;
+  }
+  
+  .navcolumn1 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 20%;
+  }
+  /**navcolumn2desktop **/
+  
+  .navcolumn2{
+    width: 15%;
+    padding: 10px;
+  }
+  .navcolumn2 h1 {
+    font-size: .46em;
+  }
+  .navcolumn2 p {
+    font-size: .46em;
+  }
+
+  /**navcolumn3 desktop **/
+
+  
+  .navcolumn3{
+    padding: 10px;
+    width: 40%;
+
+  }
+  
+  /**navcolumn4 desktop **/
+
+  .navcolumn4 {
+    padding: 10px;
+    width: 10%;
+    
+  }
+  
+  .navcolumn4 img {
+    width: 100%;
+    height: auto;
+  }
+  .navcolumn4 h1 {
+    font-size: .7em;
+    border: 1.5px solid black;
+    padding: 5px;
+    display: inline-block;
+    font-weight: 300;
+  }
+  
+/***************/
+.nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
   }
   
-  nav ul li {
+.nav ul li {
     display: inline-block;
     margin-right: 10px;
   }
   
   /* Main Content Styles */
-  main {
+.main {
     padding: 20px;
   }
-  
-  section {
-    margin-bottom: 20px;
+  /*Section CSS >> Javascript code is what makes the text appear and dissapear in the .section divs */
+  .section {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
   }
-  
-  /* Project Card Styles */
-  .project-cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+
+  .section p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
   }
-  
-  .project-card {
-    width: 300px;
-    margin: 10px;
-    border: 1px solid #ccc;
-    padding: 20px;
-  }
-  
-  .project-card img {
-    width: 100%;
-    height: auto;
+
+  .section.active p {
+    opacity: 1;
   }
   
   /* Footer Styles */
@@ -58,11 +123,7 @@ body {
     text-align: center;
     padding: 10px;
   }
-  #hero {
-    position: relative;
-    height: 300px; /* Adjust height as needed */
-    overflow: hidden;
-  }
+
   
   .reveal-content {
     position: relative;
@@ -71,13 +132,25 @@ body {
     transition: top 0.5s ease-in-out, opacity 0.5s ease-in-out;
   }
   
-  #hero.scrolled .reveal-content {
-    top: 0;
-    opacity: 1;
-  }
+
   /* Mobile Responsive Styles ----------------------------------------------------------------------------------------------------- */
   @media (max-width: 768px) {
-    .project-card {
-      width: 100%;
+    .column {
+        flex: 0 0 100%; /* Make each column take up the full width on very small screens */
+      }
+
+  /* Mobile Footer Styles */
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+  }
+
+  /* Media query for smaller screens */
+  @media (max-width: 768px) {
+    .navbar {
+      justify-content: center;
     }
   }
+}
