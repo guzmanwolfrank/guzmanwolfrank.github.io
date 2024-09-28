@@ -1,1 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Portfolio</title>
 
+  <meta name="description" content="A portfolio showcasing my skills as a web developer.">
+  <meta name="keywords" content="web development, portfolio, HTML, CSS, JavaScript">
+  <meta name="author" content="Your Name">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="hero">text goes here
+    </header>
+  
+  <nav>menu goes here
+    </nav>
+  
+  <div class="reveal-content">next div class goes here 
+    </div>
+
+
+  </body>
+  <script>
+    // Your JavaScript code here
+    window.addEventListener('scroll', () => {
+        const hero = document.getElementById('hero');
+        const revealContent = document.querySelector('.reveal-content');
+      
+        if (window.scrollY >= hero.offsetHeight) {
+          hero.classList.add('scrolled');
+        } else {
+          hero.classList.remove('scrolled');
+        }
+      });
+  </script>
+</html>
