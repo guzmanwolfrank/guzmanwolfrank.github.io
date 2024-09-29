@@ -21,15 +21,28 @@ body {
 .hero {
   width:100% ;
   height:auto ;
+  margin: auto 0;
+  display: flex;
+  padding: 20px;
+  gap: 10px;
 }
 .hero img {
   width: 100%;
 }
+.hero h1 {
+  font-size: 5.4em;
+  color: #000;
+
+}
+
+
+
+/*************************/
 .image-container {
   width: 100%;
   height: 200px; /* Adjust this to control the height of your slice */
   overflow: hidden;
-  margin-top: 80px;
+  margin-top: 0px;
 }
 .sliced-image {
   width: 100%;
@@ -45,48 +58,51 @@ body {
     background-color: #fff;
   }
 /**navcolumn1 desktop **/
-  .navcolumn1 img {
-    width: 60px;
-    height: auto;
-    padding-left: 10px;
-  }
-  
-  .navcolumn1 {
+
+.navcolumn1 {
     padding-top: 10px;
     padding-bottom: 10px;
     width: 20%;
   }
   /**navcolumn2desktop **/
   
-  .navcolumn2{
-    width: 15%;
+.navcolumn2{
+    width: 25%;
     padding: 10px;
     padding-left: 2px;
+    display: flex;
+    gap: 20px;
   }
-  .navcolumn2 h1 {
-    font-size: 1.46em;
+.navcolumn2 h1 {
+    font-size: 1.10em;
   }
-  .navcolumn2 p {
+.navcolumn2 p {
     font-size: .86em;
     font-weight: 200;
-    font-family: ;  }
+    
+  }
+.navcolumn2 img {
+      width: auto;
+      height: 40px;
+      padding-inline: 5px;
+      position: bottom;
+      
+    }
+    
 
   /**navcolumn3 desktop **/
 
   
   .navcolumn3{
     padding: 10px;
-    width: 40%;
+    width: 30%;
     font-size: 2.4em;
 
   }
-  
-  /**navcolumn4 desktop **/
-
-  .navcolumn4 {
+    /**navcolumn4 desktop **/
+.navcolumn4 {
     padding: 10px;
-    width: 14%;
-    
+    width: 12%;   
   }
   
   .navcolumn4 img {
@@ -100,18 +116,20 @@ body {
     display: inline-block;
     font-weight: 300;
   }
-  
-/***************/
-.nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  /********** Banner Box Desktop ******/
+  .bannerbox {
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px; /* Adjust the gap as needed */
+    padding: 20px;
+    font-family:  monospace;
   }
+  .bannerbox h1 {
+    font-size: 1.4 em;
+
+    }
   
-.nav ul li {
-    display: inline-block;
-    margin-right: 10px;
-  }
   /**header**/
   .header {
     background-color: #fff;
@@ -163,7 +181,6 @@ width: 100%;
   color: #000;
   width: 80%;
   margin: auto;
-  
 }
 /**********  Portfolio Grid ******************************************************************/
 
@@ -196,7 +213,7 @@ width: 100%;
   transition: filter 0.3s ease;
 }
 .portfolio-item:hover img {
-  filter: grayscale(80%);
+  filter: grayscale(0%);
 }
 .portfolio-item p {
   margin: 10px;
@@ -206,16 +223,6 @@ width: 100%;
   background-color: #000;
   padding: 10px;
 }
-
-
-
-
-
-
-
-
-
-
 
   /* Main Content Styles */
 .main {
