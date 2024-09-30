@@ -1,6 +1,6 @@
 /* Global Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: monospace;
     margin: 0;
     padding: 0;
 
@@ -14,7 +14,13 @@ pre, code {
   white-space: pre-wrap;
   word-wrap: break-word;
 }
-
+strong {
+  font-weight: 300;
+  color: #fff;
+  display: inline-block;
+  background-color: #000;
+  padding: 2px;
+}
 /* Ensure the body takes up full viewport height and handles overflow */
 html, body {
     width: 100%;
@@ -99,12 +105,7 @@ body::-webkit-scrollbar {
       padding-inline: 5px;
       position: bottom;
 }   
-/**navcolumn3 desktop **/
-.navcolumn3{
-    padding: 5px;
-    width: 30%;
-    font-size: 2.4em;
-}
+
     /**navcolumn4 desktop **/
 .navcolumn4 {
     padding: 5px;
@@ -225,24 +226,23 @@ body::-webkit-scrollbar {
   flex-direction: column;
   float: left;
   padding: 20px;
-  width: 20%;
+  width: 10%;
 }
 
 .about-left-row {
-  flex: 1;
+  width: 10%;
   /* Add styles for each row as needed */
   padding-bottom: 20px;
 }
 
 .about-left-row2 {
-  flex: 1;
+  flex: block;
   /* Add styles for each row as needed */
   padding-bottom: 20px;
+  width: 10%;
+
 }
-.about-left-row img {
-  width: 50px;
-  height: auto;
-  }
+
 
 .about-right {
   flex: 2;
@@ -258,8 +258,9 @@ body::-webkit-scrollbar {
   /* Add styles for each row as needed */
 }
 .about-right-row h1 {
-  font-size: 2.8em;
+  font-size: 2.2em;
   margin: auto;
+  padding: 20px;
 }
 .about-right-row p {
   font-size: 1.1em;
@@ -267,7 +268,7 @@ body::-webkit-scrollbar {
   display: inline-block;
 }
 
-/*** expertise */
+/*** expertise desktop */
 .expertise {
   display: flex;
   flex-direction: row;
@@ -275,30 +276,32 @@ body::-webkit-scrollbar {
   padding: 20px;
   width: 100%;
   background-color: #e2dede75;
+  font-family: monospace;
+
   }
 
 .expertise-left {
-  flex: 1;
   display: flex;
   flex-direction: column;
   float: left;
   padding: 20px;
-  width: 80%;
+  width: 20%;
 }
 
 .expertise-left-row {
-  flex: 1;
   /* Add styles for each row as needed */
   padding-bottom: 20px;
+  width: 20%;
+
 }
 .expertise-left-row h1{
-  font-size: 2em;
-  color: #666;
+  font-size: 1.2em;
+  color: #000;
   padding-top: 60px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .expertise-right {
-  flex: 2;
   display: flex;
   flex-direction: column;
   float: right;
@@ -307,9 +310,10 @@ body::-webkit-scrollbar {
 }
 
 .expertise-right-row {
-  flex: 1;
   /* Add styles for each row as needed */
   border-top: dashed 1px black;
+  width: 80%;
+  padding: 10px;
 
 }
 .expertise-right-row h1 {
@@ -333,13 +337,16 @@ body::-webkit-scrollbar {
     padding: 20px;
     width: 100%;
     background-color: #e2dede75;
+    font-family: monospace;
   }
   
   .left-column, .right-column {
     flex: 1;
     padding: 10px;
   }
-  
+  .right-column-row h2 {
+    font-family: monospace;
+  }
   .row {
     margin-bottom: 20px;
   }
@@ -347,9 +354,10 @@ body::-webkit-scrollbar {
   h2 {
     font-size: 18px;
     font-weight: bold;
+    font-family: monospace;
   }
   h3 {
-      font-size: 2.5em;
+      font-size: 1.5em;
       padding-bottom: 0px;
   }
   .row h3, p {
@@ -380,7 +388,7 @@ body::-webkit-scrollbar {
     padding: 10px;
     margin: auto 0;
     width: 100%;
-    height: 400px;
+    height: 40px;
   }
   .footer p{
     font-size: 1em;
@@ -389,7 +397,7 @@ body::-webkit-scrollbar {
 
 
 
-  /* Mobile Responsive Styles ----------------------------------------------------------------------------------------------------- */
+  /************ Mobile Responsive Styles ----------------------------------------------------------------------------------------------------- */
   @media only screen 
   and (device-width: 428px) 
   and (device-height: 926px) 
@@ -569,6 +577,7 @@ display: none;
 .about-right-row {
   flex: 1;
   /* Add styles for each row as needed */
+  width: 80%;
 }
 
 .about-right-row h1 {
@@ -582,7 +591,7 @@ display: none;
   display: inline-block;
 }
 
-/* Expertise */
+/*Mobile  Expertise ****************/
 .expertise {
   display: flex;
   flex-direction: row;
@@ -590,6 +599,7 @@ display: none;
   padding: 20px;
   width: 100%;
   background-color: #e2dede75;
+
 }
 
 .expertise-left {
@@ -640,12 +650,15 @@ display: none;
   font-weight: 400;
 }
 
-/* Resume */
+/* Mobile Resume */
 .resume {
   display: flex;
   flex-direction: row;
-} 
 
+} 
+.row h3{
+  font-size: .85em;
+}
 
 
 @media screen and (max-width: 768px) {
