@@ -1,10 +1,12 @@
 /* Global Styles */
 body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 
   }
 
-  /* Header Styles */
+  /* desktop Header Styles */
 .header {
     background-color: #333;
     color: #fff;
@@ -18,25 +20,8 @@ body {
     display: flex;
     padding: 20px;
   }
-/*****Hero**/
-.hero {
-  width:100% ;
-  height:auto ;
-  margin: auto 0;
-  display: flex;
-  padding: 20px;
-  gap: 10px;
-}
-.hero img {
-  width: 100%;
-}
-.hero h1 {
-  font-size: 5.4em;
-  color: #000;
 
-}
-
-/*************************/
+/**destkop image container***/
 .image-container, img {
   width: 100%;
   height: 200px; /* Adjust this to control the height of your slice */
@@ -71,8 +56,8 @@ body {
   /**navcolumn2desktop **/
   
 .navcolumn2{
-    width: 25%;
-    padding: 10px;
+    width: 20%;
+    padding: 5px;
     padding-left: 2px;
     display: flex;
     gap: 20px;
@@ -98,14 +83,14 @@ body {
 
   
   .navcolumn3{
-    padding: 10px;
+    padding: 5px;
     width: 30%;
     font-size: 2.4em;
 
   }
     /**navcolumn4 desktop **/
 .navcolumn4 {
-    padding: 10px;
+    padding: 5px;
     width: 12%;   
   }
   
@@ -131,10 +116,7 @@ body {
     padding-left:20px ;
     width: 100%;
   }
-  .bannerbox h1 {
-    font-size: 1.4 em;
 
-    }
   
   
 /**********  Portfolio Grid ***************************************/
@@ -369,23 +351,258 @@ body {
 
 
   /* Mobile Responsive Styles ----------------------------------------------------------------------------------------------------- */
-  @media (max-width: 768px) {
-    .navcolumn {
-        flex: 0 0 100%; /* Make each column take up the full width on very small screens */
-      }
+  @media only screen 
+  and (device-width: 428px) 
+  and (device-height: 926px) 
+  and (-webkit-device-pixel-ratio: 3) {
+/* Your iPhone 12 Pro Max specific styles go here */
+/* Global Styles for iPhone 12 Pro Max */
+/* Global Styles for iPhone 12 Pro Max */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 428px; /* iPhone 12 Pro Max width */
+  margin: 0 auto;
+}
 
-  /* Mobile Footer Styles */
-  footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
+/* Container */
+.container {
+  width: 100%;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+/* ... (other styles remain the same) ... */
+
+/* Banner Box mobile */
+.bannerbox {
+  gap: 5px;
+  padding: 0;
+  font-family: monospace;
+  margin: 0;
+  width: calc(100% - 20px);
+}
+
+.bannerbox > div {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.bannerbox h1 {
+  font-size: 1.2em;
+  margin: 5px 0;
+}
+/* Header Styles */
+.header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 15px;
+}
+
+/* Image Container */
+.image-container {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.sliced-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 55%;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  margin: 10px 0;
+  padding: 10px;
+  width: 100%;
+}
+
+.navcolumn1, .navcolumn2, .navcolumn3, .navcolumn4 {
+  width: 100%;
+  padding: 10px 0;
+}
+
+.navcolumn2 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.navcolumn2 h1 {
+  font-size: 1em;
+  margin: 0;
+}
+
+.navcolumn2 p {
+  font-size: 0.9em;
+  margin: 5px 0;
+}
+
+.navcolumn2 img {
+  height: 30px;
+}
+
+.navcolumn3 {
+  font-size: 1.8em;
+  text-align: center;
+}
+
+.navcolumn4 h1 {
+  font-size: 1.2em;
+  text-align: center;
+  border: 1.5px solid black;
+  padding: 5px;
+  display: inline-block;
+  font-weight: 300;
+}
+.portfolio-grid,.portfolio-item {
+  width: 100%;
   }
 
-  /* Media query for smaller screens */
-  @media (max-width: 768px) {
-    .navbar {
-      justify-content: center;
-    }
-  }
+
+/* mobile About Section */
+.about {
+  padding: 20px;
+  background-color: aqua;
+  width: 100%;
+  overflow: hidden;
+}
+.about p{
+  width: 100%;
+}
+.about-left{
+display: none;
+}
+.about-left img {
+  display: none;
+}
+ .about-right { 
+  width: 80%;
+  flex: 1;
+  font-size: .4em;
+}
+/*mobile **/
+ .about-right-row {
+  margin-bottom: 20px;
+  width: 100%;
+}
+.about-right-row p{
+  margin-bottom: 20px;
+  width: 100%;
+}
+.about-left-row{
+
+}
+.about-left-row, img {
+  display: none;
+}
+
+.about-right-row h1 {
+  font-size: .4em;
+  margin: 0;
+  
+}
+
+.about-right-row p {
+  font-size: 1em;
+  width: 100%;
+}
+
+/* Expertise Section */
+.expertise {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+  background-color: #e2dede75;
+}
+
+.expertise-left, .expertise-right {
+  width: 100%;
+}
+
+.expertise-left-row h1 {
+  font-size: 1.6em;
+  color: #666;
+  padding-top: 30px;
+}
+
+.expertise-right-row {
+  border-top: dashed 1px black;
+  padding: 15px 0;
+}
+
+.expertise-right-row h1 {
+  font-size: 1.2em;
+  margin: 5px 0;
+}
+
+.expertise-right-row p {
+  font-size: 1em;
+  width: 100%;
+}
+
+/* Resume Section */
+.resume {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+  background-color: #e2dede75;
+}
+
+.left-column, .right-column {
+  width: 100%;
+}
+
+.row {
+  margin-bottom: 20px;
+}
+
+.row h2 {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.row h3 {
+  font-size: 2em;
+  padding-bottom: 10px;
+}
+
+.row h3, .row p {
+  padding-left: 20px;
+}
+
+.row h4, .row a {
+  color: #fff;
+  background-color: #000;
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 1em;
+  border-radius: 15px;
+  text-decoration: none;
+  margin: 10px 0;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+}
+
+footer p {
+  font-size: 0.9em;
+  margin: 5px 0;
+}
 }
