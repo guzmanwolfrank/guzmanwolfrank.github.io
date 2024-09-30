@@ -5,6 +5,29 @@ body {
     padding: 0;
 
   }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+pre, code {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* Ensure the body takes up full viewport height and handles overflow */
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+} body {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+body::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
 
   /* desktop Header Styles */
 .header {
@@ -130,13 +153,17 @@ body {
 }
 
 .portfolio-grid {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   grid-template-columns: repeat(4, 1fr);
   gap: 40px;
   max-width: 1200px;
   margin: 0 auto;
   padding-top: 80px;
   padding-bottom: 40px;
+  padding-left: 40px;
+  width: 100%;
+  
 }
 
 .portfolio-grid h1 {
@@ -146,6 +173,7 @@ body {
 .portfolio-item {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   overflow: hidden;
   cursor: pointer;
   transition: transform 0.3s ease;
@@ -486,8 +514,15 @@ body {
 }
 
 
-
-/* About Section */
+@media only screen 
+and (device-width: 428px) 
+and (device-height: 926px) 
+and (-webkit-device-pixel-ratio: 3) {
+/* Your iPhone 12 Pro Max specific styles go here */
+/* Global Styles for iPhone 12 Pro Max */
+/* Global Styles for iPhone 12 Pro Max */
+/* Global Styles */
+/* Mobile About Section */
 .about {
   display: flex;
   flex-direction: row;
@@ -498,7 +533,7 @@ body {
 }
 
 .about-left {
-  display: flex;
+  display: none;
   flex-direction: column;
   float: left;
   padding: 20px;
@@ -509,19 +544,26 @@ body {
   flex: 1;
   /* Add styles for each row as needed */
   padding-bottom: 20px;
+  display: none;
 }
 
 .about-left-row2 {
   flex: 1;
   /* Add styles for each row as needed */
   padding-bottom: 20px;
+  display: none;
 }
 
-.about-left-row img {
-  width: 50px;
-  height: auto;
-}
+.about-left-row2 img {
 
+  display: none;
+}
+/* Media query for mobile devices */
+@media screen and (max-width: 768px) {
+  .about-left-row2 {
+    display: none;
+  }
+}
 .about-right {
   flex: 2;
   display: flex;
@@ -612,12 +654,6 @@ body {
 } 
 
 
-/* Portfolio Grid mobile */
-@media screen and (max-width: 1024px) {
-  .portfolio-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
 
 @media screen and (max-width: 768px) {
   .portbox {
@@ -640,15 +676,33 @@ body {
     font-size: 1.2em;
     
   }
-
+/*mobile **/
   .portfolio-item {
-    width: 100%;
-    flex: 1;
+  width: 100%;
+  flex: 1;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  background-color: white;
+  border-radius: 8px;
+  /*box-shadow: 0 2px 4px rgba(0,0,0,0.1);*/
   }
 
+  .portfolio-item:hover {
+    transform: translateY(-5px);
+  }
+  
   .portfolio-item img {
     width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+    }
+  .portfolio-item:hover img {
+    filter: grayscale(0%);
   }
+  
   @media screen and (max-width: 768px) {
     .portcolumn {
         flex: 100%;
