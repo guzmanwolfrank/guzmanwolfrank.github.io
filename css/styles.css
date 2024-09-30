@@ -295,10 +295,9 @@ body::-webkit-scrollbar {
 
 }
 .expertise-left-row h1{
-  font-size: 1.2em;
+  font-size: 1.5em;
   color: #000;
   padding-top: 60px;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 .expertise-right {
@@ -367,11 +366,11 @@ body::-webkit-scrollbar {
     color: #fff;
     background-color: #000;
     display: inline-block;
-    padding: 5px;
+    padding: 10px;
     font-size: 1.2 em;
     border-radius: 15px;
     text-decoration: none;
-    margin: 20px;
+    margin: 0px;
   }
   
   ul {
@@ -691,7 +690,7 @@ display: none;
   transition: transform 0.3s ease;
   background-color: white;
   border-radius: 8px;
-  /*box-shadow: 0 2px 4px rgba(0,0,0,0.1);*/
+  align-items: center;  /*box-shadow: 0 2px 4px rgba(0,0,0,0.1);*/
   }
 
   .portfolio-item:hover {
