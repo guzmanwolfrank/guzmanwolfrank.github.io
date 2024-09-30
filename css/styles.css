@@ -533,17 +533,11 @@ and (-webkit-device-pixel-ratio: 3) {
 }
 
 .about-left {
-  display: none;
-  flex-direction: column;
-  float: left;
-  padding: 20px;
-  width: 20%;
+display: none;
 }
 
 .about-left-row {
-  flex: 1;
   /* Add styles for each row as needed */
-  padding-bottom: 20px;
   display: none;
 }
 
@@ -555,8 +549,7 @@ and (-webkit-device-pixel-ratio: 3) {
 }
 
 .about-left-row2 img {
-
-  display: none;
+ display: none;
 }
 /* Media query for mobile devices */
 @media screen and (max-width: 768px) {
