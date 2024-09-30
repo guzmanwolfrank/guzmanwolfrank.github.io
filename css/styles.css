@@ -75,19 +75,13 @@ body {
       height: 40px;
       padding-inline: 5px;
       position: bottom;
-      
-    }
-    
-
-  /**navcolumn3 desktop **/
-
-  
-  .navcolumn3{
+}   
+/**navcolumn3 desktop **/
+.navcolumn3{
     padding: 5px;
     width: 30%;
     font-size: 2.4em;
-
-  }
+}
     /**navcolumn4 desktop **/
 .navcolumn4 {
     padding: 5px;
@@ -189,7 +183,6 @@ body {
   }
 
 .about-left {
-  flex: 1;
   display: flex;
   flex-direction: column;
   float: left;
@@ -209,9 +202,9 @@ body {
   padding-bottom: 20px;
 }
 .about-left-row img {
-  width: auto;
-  height: 100%;
-}
+  width: 50px;
+  height: auto;
+  }
 
 .about-right {
   flex: 2;
@@ -489,7 +482,7 @@ body {
 display: none;
 }
 .about-left img {
-  display: none;
+
 }
  .about-right { 
   width: 80%;
@@ -514,7 +507,7 @@ display: none;
   width: 10%;
 }
 .about-left-row, img {
-  display: none;
+  
 }
 
 .about-right-row h1 {
