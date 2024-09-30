@@ -113,19 +113,22 @@ body {
 
   
   
-/**********  Portfolio Grid ***************************************/
-.portbox{
+/**********  Portfolio Grid Desktop ***************************************/
+/* Portfolio Grid */
+.portbox {
   width: 80%;
   margin: auto 0;
   align-items: center;
   padding: 20px;
 }
+
 .portbox h1 {
   font-size: 1.9em;
   width: 80%;
   padding: 10px;
   margin: 0;
 }
+
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -135,10 +138,11 @@ body {
   padding-top: 80px;
   padding-bottom: 40px;
 }
-.portfolio-grid h1 {
-  font-size: 1.4 em;
 
+.portfolio-grid h1 {
+  font-size: 1.4em;
 }
+
 .portfolio-item {
   display: flex;
   flex-direction: column;
@@ -149,9 +153,11 @@ body {
   border-radius: 8px;
   /*box-shadow: 0 2px 4px rgba(0,0,0,0.1);*/
 }
+
 .portfolio-item:hover {
   transform: translateY(-5px);
 }
+
 .portfolio-item img {
   width: 100%;
   aspect-ratio: 1 / 1;
@@ -159,9 +165,11 @@ body {
   filter: grayscale(100%);
   transition: filter 0.3s ease;
 }
+
 .portfolio-item:hover img {
   filter: grayscale(0%);
 }
+
 .portfolio-item p {
   margin: 10px;
   text-align: center;
@@ -170,7 +178,9 @@ body {
   background-color: #000;
   padding: 10px;
 }
+
 /******** portfolio end desktop*******/
+
 
 /****** about desktop ****/
 .about {
@@ -286,6 +296,7 @@ body {
   font-weight: 400;
 }
 
+
 /**res desktop **/
   .resume {
     display: flex;
@@ -349,6 +360,7 @@ body {
   }
 
 
+
   /* Mobile Responsive Styles ----------------------------------------------------------------------------------------------------- */
   @media only screen 
   and (device-width: 428px) 
@@ -357,265 +369,296 @@ body {
 /* Your iPhone 12 Pro Max specific styles go here */
 /* Global Styles for iPhone 12 Pro Max */
 /* Global Styles for iPhone 12 Pro Max */
+/* Global Styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  width: 100%;
-  max-width: 428px; /* iPhone 12 Pro Max width */
-  margin: 0 auto;
 }
 
-/* Container mobile */
-.container {
-  width: 100%;
-  padding: 15px;
-  box-sizing: border-box;
-}
-
-/* ... (other styles remain the same) ... */
-
-/* Banner Box mobile */
-.bannerbox {
-  gap: 5px;
-  padding: 0;
-  font-family: monospace;
-  margin: 0;
-  width: calc(100% - 20px);
-}
-
-.bannerbox > div {
-  width: 100%;
-  padding: 10px;
-  box-sizing: border-box;
-}
-
-.bannerbox h1 {
-  font-size: 1.2em;
-  margin: 5px 0;
-}
-/* Header Styles */
+/* mobile Header Styles */
 .header {
   background-color: #333;
   color: #fff;
-  padding: 10px 15px;
+  padding: 10px;
 }
 
-/* Image Container mobile */
-.image-container {
+/* Container */
+.container {
   width: 100%;
-  height: 200px;
+  margin: auto 0;
+  display: flex;
+  padding: 20px;
+}
+
+/* mobile image container */
+.image-container, img {
+  width: 100%;
+  height: 200px; /* Adjust this to control the height of your slice */
   overflow: hidden;
+  margin-top: 0px;
 }
 
 .sliced-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 55%;
+  object-position: center 55%; /* Adjust this to control which part of the image is shown */
+  margin: auto 0;
+  padding: 0px;
 }
 
-/* Navbar mobile */
+/* Navbar */
 .navbar {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
   background-color: #fff;
-  margin: 10px 0;
-  padding: 10px;
-  width: 100%;
+  margin: 10px;
+  padding: 20px;
 }
 
-.navcolumn1, .navcolumn2, .navcolumn3, .navcolumn4 {
-  width: 100%;
-  padding: 10px 0;
+/* Nav columns (mobile) */
+.navcolumn1 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 20%;
 }
 
 .navcolumn2 {
+  width: 20%;
+  padding: 5px;
+  padding-left: 2px;
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+  gap: 20px;
 }
 
 .navcolumn2 h1 {
-  font-size: 1em;
-  margin: 0;
+  font-size: 1.10em;
 }
 
 .navcolumn2 p {
-  font-size: 0.9em;
-  margin: 5px 0;
+  font-size: 0.86em;
+  font-weight: 200;
 }
 
 .navcolumn2 img {
-  height: 30px;
+  width: auto;
+  height: 40px;
+  padding-inline: 5px;
+  position: bottom;
 }
 
 .navcolumn3 {
-  font-size: 1.8em;
-  text-align: center;
+  padding: 5px;
+  width: 30%;
+  font-size: 2.4em;
+}
+
+.navcolumn4 {
+  padding: 5px;
+  width: 12%;
+}
+
+.navcolumn4 img {
+  width: 100%;
+  height: auto;
 }
 
 .navcolumn4 h1 {
-  font-size: 1.2em;
-  text-align: center;
+  font-size: 1.57em;
   border: 1.5px solid black;
   padding: 5px;
   display: inline-block;
   font-weight: 300;
 }
-.portfolio-grid,.portfolio-item {
-  width: 100%;
-  }
 
-
-/* mobile About Section */
-.about {
+/* Banner Box mobile */
+.bannerbox {
+  border: 1px solid black;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px; /* Adjust the gap as needed */
   padding: 20px;
+  font-family: monospace;
+  padding-left: 20px;
+  width: 100%;
+}
+
+
+
+/* About Section */
+.about {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* Adjust spacing between columns */
+  padding: 20px;
+  width: 100%;
   background-color: aqua;
-  width: 100%;
-  overflow: hidden;
 }
-.about p{
-  width: 100%;
-}
-.about-left{
-display: none;
-}
-.about-left img {
 
+.about-left {
+  display: flex;
+  flex-direction: column;
+  float: left;
+  padding: 20px;
+  width: 20%;
 }
- .about-right { 
-  width: 80%;
+
+.about-left-row {
   flex: 1;
-  font-size: .4em;
+  /* Add styles for each row as needed */
+  padding-bottom: 20px;
 }
-/*mobile **/
- .about-right-row {
-  margin-bottom: 20px;
-  width: 80%;
-}
-.about-right-row p{
-  margin-bottom: 20px;
-  width: 100%;
-}
-.about-left-row{
 
-}
 .about-left-row2 {
   flex: 1;
+  /* Add styles for each row as needed */
   padding-bottom: 20px;
-  width: 10%;
 }
-.about-left-row, img {
-  
+
+.about-left-row img {
+  width: 50px;
+  height: auto;
+}
+
+.about-right {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  float: right;
+  padding: 20px;
+  width: 80%;
+}
+
+.about-right-row {
+  flex: 1;
+  /* Add styles for each row as needed */
 }
 
 .about-right-row h1 {
-  font-size: .4em;
-  margin: 0;
-  
+  font-size: 2.8em;
+  margin: auto;
 }
 
 .about-right-row p {
-  font-size: 1em;
-  width: 100%;
+  font-size: 1.1em;
+  width: 80%;
+  display: inline-block;
 }
 
-/* Expertise Section mobile*/
+/* Expertise */
 .expertise {
   display: flex;
-  flex-direction: column;
-  padding: 20px 0;
+  flex-direction: row;
+  justify-content: space-between; /* Adjust spacing between columns */
+  padding: 20px;
+  width: 100%;
   background-color: #e2dede75;
 }
 
-
- .expertise-right {
+.expertise-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  float: left;
+  padding: 20px;
   width: 80%;
 }
 
-.expertise-left {
-  width: 20%;
-  font-size: .8em;
-}
 .expertise-left-row {
-  width: 20%;
+  flex: 1;
+  /* Add styles for each row as needed */
+  padding-bottom: 20px;
 }
 
 .expertise-left-row h1 {
-  font-size: .8em;
+  font-size: 2em;
   color: #666;
-  padding-top: 30px;
+  padding-top: 60px;
+}
+
+.expertise-right {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  float: right;
+  padding: 20px;
+  width: 80%;
 }
 
 .expertise-right-row {
+  flex: 1;
+  /* Add styles for each row as needed */
   border-top: dashed 1px black;
-  padding: 20px;
-  width: 80%;
 }
 
 .expertise-right-row h1 {
   font-size: 1.2em;
-  margin: 5px 0;
+  font-weight: ;
 }
 
 .expertise-right-row p {
-  font-size: 1em;
-  width: 100%;
+  font-size: 1.1em;
+  width: 80%;
+  display: inline-block;
+  font-weight: 400;
 }
 
-/* Resume Section mobile*/
+/* Resume */
 .resume {
   display: flex;
-  flex-direction: column;
-  padding: 20px 0;
-  background-color: #e2dede75;
+  flex-direction: row;
+} 
+
+
+/* Portfolio Grid mobile */
+@media screen and (max-width: 1024px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-.left-column, .right-column {
-  width: 100%;
+@media screen and (max-width: 768px) {
+  .portbox {
+    width: 90%;
+  }
+
+  .portbox h1 {
+    width: 100%;
+    font-size: 1.6em;
+  }
+
+  .portfolio-grid {
+    gap: 10px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    display: flex;
+  }
+
+  .portfolio-grid h1 {
+    font-size: 1.2em;
+    
+  }
+
+  .portfolio-item {
+    width: 100%;
+    flex: 1;
+  }
+
+  .portfolio-item img {
+    width: 100%;
+  }
+  @media screen and (max-width: 768px) {
+    .portcolumn {
+        flex: 100%;
+    }
+}
+/* Media query for mobile devices */
+@media screen and (max-width: 768px) {
+  .responsive-column {
+    flex: 0 0 100%; /* Full width for single column on mobile */
+  }
 }
 
-.row {
-  margin-bottom: 20px;
-}
-
-.row h2 {
-  font-size: 1.2em;
-  font-weight: bold;
-}
-
-.row h3 {
-  font-size: 2em;
-  padding-bottom: 10px;
-}
-
-.row h3, .row p {
-  padding-left: 20px;
-}
-
-.row h4, .row a {
-  color: #fff;
-  background-color: #000;
-  display: inline-block;
-  padding: 5px 10px;
-  font-size: 1em;
-  border-radius: 15px;
-  text-decoration: none;
-  margin: 10px 0;
-}
-
-/* Footer */
-footer {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 20px;
-  width: 100%;
-}
-
-footer p {
-  font-size: 0.9em;
-  margin: 5px 0;
-}
-}
+  }
