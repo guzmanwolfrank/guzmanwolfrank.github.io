@@ -228,7 +228,7 @@ body::-webkit-scrollbar {
   justify-content: space-between; /* Adjust spacing between columns */
   padding: 20px;
   width: 100%;
-  background-color: aqua;
+  background-color: #00ffff;
   }
 
 .about-left {
