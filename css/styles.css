@@ -104,12 +104,15 @@ body::-webkit-scrollbar {
       height: 40px;
       padding-inline: 5px;
       position: bottom;
+      flex: none;
+
 }   
 
     /**navcolumn4 desktop **/
 .navcolumn4 {
     padding: 5px;
-    width: 12%;   
+    width: 10vh;
+
   }
   
   .navcolumn4 img {
