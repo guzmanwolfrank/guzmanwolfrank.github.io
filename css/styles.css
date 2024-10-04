@@ -107,6 +107,13 @@ body::-webkit-scrollbar {
       flex: none;
 
 }   
+.navcolumn2 h3, a, .navcolumn2 h3 a:active, {
+  text-decoration: none;
+  font-size:1.1em;
+  background-color: #fff;
+  color: #000;
+
+}
 
     /**navcolumn4 desktop **/
 .navcolumn4 {
@@ -486,7 +493,9 @@ body {
   padding-inline: 5px;
   position: bottom;
 }
-
+.navbar-navcolumn2 h3 a:active{
+  font-size: 1em;
+}
 .navcolumn3 {
   padding: 5px;
   width: 30%;
@@ -510,7 +519,15 @@ body {
   display: inline-block;
   font-weight: 300;
 }
-
+.navcolumn4 h2, .navcolumn4 h2 a:active {
+  font-size: 1.57em;
+  border: 1.5px solid black;
+  padding: 5px;
+  display: inline-block;
+  font-weight: 300;
+  color: #000;
+  background-color: #fff;
+}
 /* Banner Box mobile */
 .bannerbox {
   border: 1px solid black;
@@ -521,6 +538,7 @@ body {
   font-family: monospace;
   padding-left: 20px;
   width: 100%;
+  padding-top: 10px;
 }
 
 
@@ -580,9 +598,9 @@ display: none;
 }
 
 .about-right-row {
-  flex: 1;
   /* Add styles for each row as needed */
-  width: 80%;
+  width: 100%;
+  display: block;
 }
 
 .about-right-row h1 {
@@ -635,13 +653,14 @@ display: none;
   flex-direction: column;
   float: right;
   padding: 20px;
-  width: 60%;
+  width: 50%;
 }
 
 .expertise-right-row {
   flex: 1;
   /* Add styles for each row as needed */
   border-top: dashed 1px black;
+  width: 100%;
 }
 
 .expertise-right-row h1 {
@@ -660,7 +679,8 @@ display: none;
 .resume {
   display: block;
   flex-direction: row;
-
+  justify-content: center;
+  align-items: center;
 } 
 .row h3{
   font-size: .85em;
