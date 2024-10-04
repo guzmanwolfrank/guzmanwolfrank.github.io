@@ -88,7 +88,7 @@ body::-webkit-scrollbar {
     width: 20%;
     padding: 5px;
     padding-left: 2px;
-    display: flex;
+    display: block;
     gap: 20px;
   }
 .navcolumn2 h1 {
@@ -567,6 +567,9 @@ display: none;
     display: none;
   }
 }
+.right-column-row {
+  width: 30%;
+}
 .about-right {
   flex: 2;
   display: flex;
@@ -610,7 +613,8 @@ display: none;
   flex-direction: column;
   float: left;
   padding: 20px;
-  width: 80%;
+  width: 40%;
+  font-size: 1.5em;
 }
 
 .expertise-left-row {
@@ -620,7 +624,7 @@ display: none;
 }
 
 .expertise-left-row h1 {
-  font-size: 2em;
+  font-size: 1.5em;
   color: #666;
   padding-top: 60px;
 }
@@ -631,7 +635,7 @@ display: none;
   flex-direction: column;
   float: right;
   padding: 20px;
-  width: 80%;
+  width: 60%;
 }
 
 .expertise-right-row {
@@ -642,7 +646,7 @@ display: none;
 
 .expertise-right-row h1 {
   font-size: 1.2em;
-  font-weight: ;
+    
 }
 
 .expertise-right-row p {
@@ -654,7 +658,7 @@ display: none;
 
 /* Mobile Resume */
 .resume {
-  display: flex;
+  display: block;
   flex-direction: row;
 
 } 
