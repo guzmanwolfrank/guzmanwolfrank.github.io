@@ -3,6 +3,7 @@ body {
     font-family: monospace;
     margin: 0;
     padding: 0;
+    width: 80%;
 
   }
   * {
@@ -44,7 +45,7 @@ body::-webkit-scrollbar {
   
 /* Container */
 .container{
-    width: 100%;
+    max-width: 70%;
     margin: auto 0;
     display: flex;
     padding: 20px;
@@ -74,6 +75,8 @@ body::-webkit-scrollbar {
     background-color: #fff;
     margin: 10px;
     padding: 20px;
+    align-content: center;
+    align-items: center;
   }
 /**navcolumn1 desktop **/
 
@@ -138,11 +141,13 @@ body::-webkit-scrollbar {
     border: 1px solid black;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 10px; /* Adjust the gap as needed */
+    grid-gap: 20px; /* Adjust the gap as needed */
     padding: 20px;
     font-family:  monospace;
-    padding-left:20px ;
-    width: 100%;
+    padding-left:80px ;
+    width: auto;
+    margin: auto 0;
+    align-items: center ;
   }
 
   

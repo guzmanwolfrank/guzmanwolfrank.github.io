@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Website</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 70%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .navbar a {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Banner Box */
+        .bannerbox {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .bannerbox div {
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        /* About Section */
+        .about {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* Text and List Section */
+        .text-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .text-list ul {
+            list-style-position: inside;
+        }
+
+        /* Image Grid */
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .image-grid img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Text and Image Section */
+        .text-image {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .text-image img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Media Queries for Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+
+            .navbar,
+            .bannerbox {
+                grid-template-columns: 1fr;
+            }
+
+            .about,
+            .text-list,
+            .text-image {
+                grid-template-columns: 1fr;
+            }
+
+            .image-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+        </nav>
+
+        <div class="bannerbox">
+            <div>Banner Content 1</div>
+            <div>Banner Content 2</div>
+            <div>Banner Content 3</div>
+        </div>
+
+        <section class="about">
+            <div>
+                <h2>About Column 1</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div>
+                <h2>About Column 2</h2>
+                <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+        </section>
+
+        <div class="text-list">
+            <div>
+                <h2>Text Content</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <ul>
+                <li>List Item 1</li>
+                <li>List Item 2</li>
+                <li>List Item 3</li>
+                <li>List Item 4</li>
+            </ul>
+        </div>
+
+        <div class="image-grid">
+            <img src="/api/placeholder/200/200" alt="Grid Image 1">
+            <img src="/api/placeholder/200/200" alt="Grid Image 2">
+            <img src="/api/placeholder/200/200" alt="Grid Image 3">
+            <img src="/api/placeholder/200/200" alt="Grid Image 4">
+        </div>
+
+        <div class="text-image">
+            <div>
+                <h2>Final Text Content</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <img src="/api/placeholder/400/300" alt="Final Section Image">
+        </div>
+    </div>
+</body>
+</html>
