@@ -383,4 +383,25 @@ footer {
     display: inline-block;
     font-weight: 400;
   }
+  .resumecontainer {
+    width: 100%;
+    margin: 0 auto;
+    padding: 60px;
+    background-color: #f4f4f4;
+}
+.resumebutton a{
+    font-size: 1.5em;
+    background-color: #inherit;
+    display: inline-block;
+    color: #000;
+    border-radius: 10px;
+    padding: 10px;
+    text-decoration: none;
+    border: 1px solid #333;}
+.resumebutton a:active, .resumebutton a:hover, .resumebutton a:visited {
+    background-color: #666;
+    color: #fff;
+    cursor: pointer;
+}
+
 }
