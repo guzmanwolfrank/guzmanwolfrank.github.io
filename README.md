@@ -118,21 +118,6 @@ cd uk-traffic-analysis
 pip install -r requirements.txt
 ```
 
-## Usage
-```python
-# Example code for loading the datasets
-import pandas as pd
-
-# Load the accident data
-accidents_df = pd.read_csv('data/accidents_master.csv')
-
-# Load the casualties data
-casualties_df = pd.read_csv('data/casualties_master.csv')
-
-# Load the vehicles data
-vehicles_df = pd.read_csv('data/vehicles_master.csv')
-```
-
 ## Recommendations
 1. **Smart Infrastructure Implementation** (15-20% potential reduction)
    - AI-powered traffic management
