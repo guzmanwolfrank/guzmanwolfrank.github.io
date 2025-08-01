@@ -3,127 +3,805 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wolf Guzman</title>
-    <link rel="stylesheet" href="css/styles.css">
-   
+    <title>Wolfrank Guzman - Data Engineer & ETL Development Specialist</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        nav {
+            background: #05f15f;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight:500;
+            color: #2c3e50;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #54595d;
+        }
+
+        /* Hero Section */
+        .hero {
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            background-image: url('img/student.jpg');
+            background-size: cover;
+            background-position: bottom;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            position: relative;
+            min-height: 800px;
+            width: 100%;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+
+        .hero .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 300;
+            margin-bottom: 1rem;
+        }
+
+        .hero .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .hero .description {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+            line-height: 1.8;
+        }
+
+        .contact-info-hero {
+            font-size: 1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+
+        .btn-primary:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid rgba(255,255,255,0.5);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.1);
+            transform: translateY(-2px);
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin-bottom: 3rem;
+            color: #2c3e50;
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .skill-category {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .skill-category:hover {
+            transform: translateY(-5px);
+        }
+
+        .skill-category h3 {
+            color: #3498db;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .skill-category ul {
+            list-style: none;
+        }
+
+        .skill-category li {
+            padding: 0.5rem 0;
+            color: #555;
+            border-bottom: 1px solid #eee;
+        }
+
+        .skill-category li:last-child {
+            border-bottom: none;
+        }
+
+        /* Experience Section */
+        .experience {
+            background: white;
+        }
+
+        .experience-timeline {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .experience-item {
+            background: #f8f9fa;
+            margin-bottom: 2rem;
+            padding: 2rem;
+            border-radius: 10px;
+            border-left: 4px solid #3498db;
+            position: relative;
+        }
+
+        .experience-item h3 {
+            color: #2c3e50;
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .company {
+            color: #3498db;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .date {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .experience-item ul {
+            list-style: none;
+            padding-left: 1rem;
+        }
+
+        .experience-item li {
+            margin-bottom: 0.5rem;
+            position: relative;
+        }
+
+        .experience-item li::before {
+            content: "•";
+            color: #3498db;
+            position: absolute;
+            left: -1rem;
+        }
+
+        /* About Section */
+        .about {
+            background: #f8f9fa;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            color: #555;
+        }
+
+        /* Projects Section */
+        .projects {
+            background: #f8f9fa;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .project-image {
+            width: 100%;
+            height: 200px;
+            background: #f8f9fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #e9ecef;
+        }
+
+        .project-screenshot {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: #f8f9fa;
+            transition: transform 0.3s ease;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-size: 0.9rem;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .project-card:hover .project-screenshot {
+            transform: scale(1.05);
+        }
+
+        .project-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            color: white;
+            font-size: 2rem;
+        }
+
+        .project-card:hover .project-overlay {
+            opacity: 1;
+        }
+
+        .project-content {
+            padding: 1.5rem;
+        }
+
+        .project-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-description {
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tech-tag {
+            background: #e3f2fd;
+            color: #1976d2;
+            padding: 0.2rem 0.6rem;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: white;
+            text-align: center;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .contact-item .icon {
+            width: 50px;
+            height: 50px;
+            background: #3498db;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        .contact-item span {
+            color: #555;
+            font-weight: 500;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background: #34495e;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: #3498db;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero .subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+
+            .hero {
+                background-attachment: scroll;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .projects-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
 </head>
 <body>
-    <nav class="navbar">
-       <div class="logo2"><a href="#">Wolfrank</a> </div>
-        <p>Derivatives + Cloud Development</p>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">Wolfrank Guzman</div>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
-    <div class="bannerbox">
-        <div>Github: @guzmanwolfrank</div>
-        <div>NY // SF </div>
-        <div><a href ="mailto:wolfranknyc@gmail.com">Contact</a></div>
-    </div>
-
-    <div class="imagebox">
-        <img src="img/student.jpg" alt="Sliced image example" class="sliced-image">
-      </div>
-      
-        <!-- Previous content remains the same -->
- 
-            <div class="aboutcontainer">
-                <div class="container">
-                    <section class="about">
-                        <div>
-                            <h2> about</h2>
-                            <p>I possess a strong foundation in derivatives trading and a deep understanding of cloud data engineering. My expertise lies in leveraging data-driven insights to optimize trading strategies and drive business growth. I am skilled in building scalable data pipelines, automating workflows, and implementing robust data governance practices.</p>
-                        </div>
-                       
-                    </section>
-
-                </div>
-   </div> 
-
-<!---expertise-->
-  <div class="expertisecontainer"> 
-    <div class="container">
-    <div class="expertise-right">
-     <div class="expertise-right-row"><p><strong>Programming Languages:</strong> Python, SQL, HTML, CSS </p>
-     </div>
-     <div class="expertise-right-row"><p><strong>Dashboards:</strong> Google Looker, Tableau, Power BI, Excel</p>
-     </div>
-     <div class="expertise-right-row"><p><strong> CI/CD:</strong>  Git, Github, Jenkins</p>
-     </div>
-     <div class="expertise-right-row"><p><strong>Cloud Platforms :</strong>  AWS, Google Cloud, Azure</p>
-     </div>
-     <div class="expertise-right-row"><p><strong>Machine Learning & Data Science:</strong> Pandas, Sci-Kit</p>
-     </div>
-     <div class="expertise-right-row"><p><strong>Data Pipelines:</strong> Apache Airflow, Apache Kafka, AWS Glue, Google Dataflow, Snowflake</p>
-     </div>
-     <div class="expertise-right-row"><p><strong>Trading:</strong> CME Globex, Oanda, Oandav20, NinjaTrader, Thinkorswim API, MQL5, Pinescript</p>
-     </div>
-
-   </div>
-
-</div>
-
-</div>
-
-
-<!--- Image Grid -->   
-<div class="container"><h1>Github Projects</h1><br></div><br> 
-        <div class="image-grid">
-            
-            <div class="grid-item">
-                <img src="/img/gim.png" alt="Grid Image 1">
-                <span class="github-label"><a href="https://github.com/guzmanwolfrank/QuantTrading" target="_blank">Quant Trading</a>
-                </div>
-            <div class="grid-item">
-                <img src="/img/gib.png" alt="Grid Image 1">
-                <span class="github-label"><a href="https://github.com/guzmanwolfrank/Data-SQL"target="_blank">SQL Data Analysis</a>
-                </div>
-            <div class="grid-item">
-                <img src="/img/gib.png" alt="Grid Image 1">
-                <span class="github-label"><a href="https://github.com/guzmanwolfrank/AWS-Cloud"target="_blank">AWS Cloud Tools</a>
-                </div>
-            <div class="grid-item">
-                <img src="/img/gir.png" alt="Grid Image 1">
-                <span class="github-label"><a href="https://github.com/guzmanwolfrank/Python"target="_blank">Python Tools</a>
-                </span>
-            </div>
-         
-        </div>
-
-        <div class="image-container">
-            <a href="report.html">
-                <img src="img/ukstudy.png" alt="UK Study" title="Click to learn more">
-            </a>
-            <span class="github-label"><a href="report.html"target="_blank">UK Accident Analysis Project</a>
-
-        </div>
-<!--- Resume  -->
-                <div class="resumecontainer">
-                <div class="resumebutton"><a href="resume/resume.pdf" target="_blank">Download My Resume</a></div>                 
-                </div>
-        <!-- New Footer Section -->
-    <footer>
+    <!-- Hero Section -->
+    <section class="hero">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Address</h3>
-                
-                    <p> New York, NY 10001</p>
-                    <p>San Francisco, CA 94112 </p>
-                </div>
-                <div class="footer-section">
-                    <h3>Contact</h3>
-                    <p>Email: wolfranknyc@gmail.com</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Hours</h3>
-                    <p>Monday - Friday: 9am - 5pm</p>
-                    <p>Saturday: 10am - 2pm</p>
-                    <p>Sunday: Closed</p>
-                </div>
-            </div>
-            <div class="disclaimer">
-                <p>Disclaimer: This website and its content are for informational purposes only. All rights reserved. <br>© 2024 GhostOkamiiii.<br> Use of this site constitutes acceptance of our Terms of Service and Privacy Policy.</p>
+            <h1>Wolfrank Guzman</h1>
+            <p class="subtitle">Cloud & Data Developer</p>
+           
+            <p class="description">
+                Accomplished Data Analytics Professional with 6+ years of hands-on experience in database administration, 
+                cloud data architecture, and ETL solution development. Proven expertise in AWS cloud services, Python development, 
+                and data pipeline automation with a demonstrated track record of improving system performance.
+            </p>
+            <div class="cta-buttons">
+                <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                <a href="#experience" class="btn btn-secondary">View Experience</a>
             </div>
         </div>
-    </footer>
-</body>
-</html>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content fade-in">
+                <p>
+               I'm a Data Analytics Professional with over 6 years of experience in database administration, cloud architecture, and ETL development using AWS and Python. 
+               
+                             
+                My passion lies in combining real-world trading experience with Data expertise to create innovative solutions that bridge the gap between markets and cloud technology.
+
+
+This is why  when not working for Imperium, I'm a funded derivatives prop trader with over 15 years trading experience.  I am currently developing algorithmic trading systems for Nasdaq 100 derivatives and Forex USD pairs.
+
+ I love optimizing complex systems.
+                </p>
+            
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title">Core Technical Competencies</h2>
+            <div class="skills-grid">
+                <div class="skill-category fade-in">
+                    <h3>Cloud Data Platforms & Big Data</h3>
+                    <ul>
+                        <li>Databricks (3+ years)</li>
+                        <li>Microsoft Azure Cloud (Data Factory, Dataflows, Azure Functions)</li>
+                        <li>Snowflake Administration & Development (SnowSQL, SnowPipe - 4+ years)</li>
+                        <li>AWS RDS optimization</li>
+                        <li>GCP BigQuery</li>
+                        <li>Distributed architectures</li>
+                    </ul>
+                </div>
+                <div class="skill-category fade-in">
+                    <h3>ETL Development & Data Pipelines</h3>
+                    <ul>
+                        <li>ETL pipeline design and implementation (4+ years)</li>
+                        <li>Apache Spark development and optimization</li>
+                        <li>Python scripting for data processing (PySpark)</li>
+                        <li>Linux scripting and command-line proficiency</li>
+                        <li>Multi-source data integration</li>
+                        <li>Apache Airflow workflow orchestration</li>
+                    </ul>
+                </div>
+                <div class="skill-category fade-in">
+                    <h3>AWS Services</h3>
+                    <ul>
+                        <li>Athena</li>
+                        <li>S3</li>
+                        <li>QuickSight</li>
+                        <li>RDS</li>
+                        <li>Lambda</li>
+                        <li>CloudWatch</li>
+                        <li>Glue</li>
+                    </ul>
+                </div>
+                <div class="skill-category fade-in">
+                    <h3>Data Storage Technologies</h3>
+                    <ul>
+                        <li>Apache Parquet</li>
+                        <li>SQL databases</li>
+                        <li>NoSQL databases</li>
+                        <li>Data lakehouse patterns</li>
+                        <li>Serverless architectures</li>
+                    </ul>
+                </div>
+                <div class="skill-category fade-in">
+                    <h3>Production Support & Operations</h3>
+                    <ul>
+                        <li>On-call production support rotations</li>
+                        <li>Real-time monitoring and incident response</li>
+                        <li>System performance analysis and optimization</li>
+                        <li>Troubleshooting complex data pipeline issues</li>
+                        <li>Documentation and SDLC best practices</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section experience">
+        <div class="container">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="experience-timeline">
+                <div class="experience-item fade-in">
+                    <h3>Data & AWS Cloud Engineer</h3>
+                    <div class="company">Imperium, Tampa, FL (Remote)</div>
+                    <div class="date">February 2023 - Present</div>
+                    <ul>
+                        <li>Architect and maintain cloud-based data analytics solutions including Snowflake environments, implementing RBAC best practices and user management protocols</li>
+                        <li>Design and deploy ETL pipelines for multi-source data integration, reducing manual processing overhead by 60% through automation-first approach</li>
+                        <li>Conduct comprehensive database performance analysis and optimization, improving query response times and system efficiency by 40%</li>
+                        <li>Lead cross-functional collaboration with Executive, Product, and Data teams to resolve complex technical issues and implement data architecture improvements</li>
+                        <li>Create and maintain data infrastructure including schemas, tables, views, pipes, streams, and automated tasks</li>
+                        <li>Develop monitoring and reporting solutions for database performance tracking and optimization identification</li>
+                        <li>Mentor and train team members on database administration best practices and advanced analytical methodologies</li>
+                    </ul>
+                </div>
+
+    <div class="experience-item fade-in">
+                    <h3>Derivatives + Alternative Investments</h3>
+                    <div class="company">AG Wolf Capital, San Francisco, CA (Remote)</div>
+                    <div class="date">August 2012 - Present</div>
+                <ul>
+  
+    <li>Started a boutique signal service  developing proprietary algorithmic signals for institutional and retail clients</li>
+    <li>Execute systematic futures strategies with funded capital using custom block trading system developed on Quantower platform</li>
+    <li>Provide quantitative trading signals and alternative investment solutions to external capital allocators and CTAs</li>
+    <li>Built and optimized financial reporting databases for signal generation and client portfolio management</li>
+    <li>Developed complex SQL queries and database solutions for signal backtesting infrastructure and client reporting</li>
+    <li>Designed real-time database monitoring systems for signal performance tracking and portfolio analytics</li>
+    <li>Implemented comprehensive data validation processes for signal delivery and automated trading systems</li>
+</ul>
+                </div>
+
+
+                <div class="experience-item fade-in">
+                    <h3>Derivatives Trader</h3>
+                    <div class="company">FC Stone-League Trading, Chicago, IL (Remote)</div>
+                    <div class="date">April 2019 - April 2023</div>
+                    <ul>
+                        <li>Traded Nasdaq 100 Derivatives with institutional capital.</li>
+                        <li>Achieved a low drawdown system with a 2.5 Sharpe Ratio trading on CME GLOBEX Platform via CTS TRADER.</li>
+                        <li>Administered and optimized financial reporting databases, implementing performance tuning strategies that reduced report generation time by 30%</li>
+                        <li>Developed complex SQL queries and database solutions for regulatory compliance and financial data analysis</li>
+                        <li>Collaborated with compliance teams to ensure data governance and regulatory adherence for financial data handling</li>
+                        <li>Designed and maintained database monitoring systems for real-time performance tracking</li>
+                        <li>Conducted technical training sessions on database optimization and query development best practices</li>
+                        <li>Implemented data validation processes and quality assurance protocols for financial reporting systems</li>
+                    </ul>
+                </div>
+                <div class="experience-item fade-in">
+                    <h3>SAP Database Analyst</h3>
+                    <div class="company">Tarkett, Solon, Ohio (Remote)</div>
+                    <div class="date">March 2017 - March 2019</div>
+                    <ul>
+                        <li>Managed enterprise SAP database ETL processes, implementing data profiling and quality improvement processes that increased accuracy by 25%</li>
+                        <li>Experience with enterprise data integration from legacy mainframe systems</li>
+                        <li>Implemented automated monitoring solutions for proactive database maintenance and optimization</li>
+                        <li>Created comprehensive documentation and training materials following SDLC best practices</li>
+                        <li>Collaborated with teams to troubleshoot and resolve complex database performance issues</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GitHub Projects Section -->
+    <section id="projects" class="section projects">
+        <div class="container">
+            <h2 class="section-title">GitHub Projects</h2>
+            <div class="projects-grid">
+                <a href="https://github.com/guzmanwolfrank/Data-SQL" target= "_blank" class="project-card fade-in">
+                    <div class="project-image">
+                        <div class="project-screenshot">Data--SQL Architecture<img src="img/image.png" alt="Data image">
+</div>
+                        <div class="project-overlay">🔗 View Code</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title"></h3> SQL + DATA</h3>
+                        <p class="project-description">This repository demonstrates practical applications of SQL and Python for data analysis, visualization, and dashboard creation across different domains like banking, real estate, and salary data.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Airflow</span>
+                            <span class="tech-tag">SQL</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="https://github.com/guzmanwolfrank/Snowflake" target="_blank" class="project-card fade-in">
+                    <div class="project-image">
+                        <div class="project-screenshot"><img src="img/snow.jpg"></div>
+                        <div class="project-overlay">🔗 View Code</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Snowflake Optimization Suite</h3>
+                        <p class="project-description">This project is aimed at performing data analysis on transactions stored in a Snowflake database.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Snowflake</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">SQL</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="https://github.com/guzmanwolfrank/AWS-Cloud" target="_blank" class="project-card fade-in">
+                    <div class="project-image">
+                        <div class="project-screenshot"><img src="img/aws.jpg"></div>
+                        <div class="project-overlay">🔗 View Code</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">AWS </h3>
+                        <p class="project-description">Some projects include scalable data lake implementation using AWS Glue, S3, and Athena for analytics workloads.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">AWS</span>
+                            <span class="tech-tag">Glue</span>
+                            <span class="tech-tag">S3</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="https://github.com/guzmanwolfrank/QuantTrading" target="_blank" class="project-card fade-in">
+                    <div class="project-image">
+                        <div class="project-screenshot"><img src="img/quant2.png"></div>
+                        <div class="project-overlay">🔗 View Code</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Quantitative</h3>
+                        <p class="project-description">High-performance data processing pipelines, backtests and Quant Analysis tools. </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">SQL</span>
+                            <span class="tech-tag">Yfinance</span>
+                        </div>
+                    </div>
+                </a>
+                
+                
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p style="font-size: 1.1rem; color: #555; margin-bottom: 2rem;">
+                I'm always interested in discussing new opportunities, innovative data solutions, and ETL development projects.
+            </p>
+            <div class="contact-info">
+                <div class="contact-item fade-in">
+                   
+                    <span>wolfranknyc@gmail.com</span>
+                </div>
+              
+            </html>
