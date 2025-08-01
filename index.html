@@ -284,7 +284,7 @@
             color: #555;
         }
 
-        /* Projects Section */
+        /* Projects Section - IMPROVED FOR MOBILE */
         .projects {
             background: #f8f9fa;
         }
@@ -470,7 +470,7 @@
             background: #3498db;
         }
 
-        /* Responsive */
+        /* Responsive - ENHANCED MOBILE SUPPORT */
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2.5rem;
@@ -488,8 +488,54 @@
                 grid-template-columns: 1fr;
             }
             
+            /* MOBILE-SPECIFIC PROJECT IMPROVEMENTS */
             .projects-grid {
                 grid-template-columns: 1fr;
+                gap: 1.5rem;
+                margin-top: 1.5rem;
+            }
+
+            .project-card {
+                max-width: 100%;
+                margin: 0 auto;
+            }
+
+            .project-image {
+                height: 180px;
+            }
+
+            .project-content {
+                padding: 1.25rem;
+            }
+
+            .project-title {
+                font-size: 1.1rem;
+                margin-bottom: 0.75rem;
+                line-height: 1.3;
+            }
+
+            .project-description {
+                font-size: 0.85rem;
+                line-height: 1.4;
+                margin-bottom: 1rem;
+            }
+
+            .project-tech {
+                gap: 0.4rem;
+            }
+
+            .tech-tag {
+                font-size: 0.7rem;
+                padding: 0.25rem 0.5rem;
+            }
+
+            .project-overlay {
+                font-size: 1.5rem;
+            }
+
+            .project-screenshot {
+                font-size: 0.8rem;
+                padding: 15px;
             }
             
             .contact-info {
@@ -500,11 +546,66 @@
             .hero {
                 background-attachment: scroll;
             }
+
+            .section {
+                padding: 60px 0;
+            }
+
+            .section-title {
+                font-size: 2rem;
+                margin-bottom: 2rem;
+            }
+
+            .container {
+                padding: 0 15px;
+            }
         }
 
-        @media (max-width: 1024px) {
+        /* Tablet responsiveness */
+        @media (max-width: 1024px) and (min-width: 769px) {
             .projects-grid {
                 grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+
+            .project-content {
+                padding: 1.3rem;
+            }
+
+            .project-title {
+                font-size: 1.15rem;
+            }
+
+            .project-description {
+                font-size: 0.87rem;
+            }
+        }
+
+        /* Small mobile devices */
+        @media (max-width: 480px) {
+            .project-image {
+                height: 160px;
+            }
+
+            .project-content {
+                padding: 1rem;
+            }
+
+            .project-title {
+                font-size: 1rem;
+            }
+
+            .project-description {
+                font-size: 0.8rem;
+            }
+
+            .tech-tag {
+                font-size: 0.65rem;
+                padding: 0.2rem 0.4rem;
+            }
+
+            .container {
+                padding: 0 10px;
             }
         }
 
@@ -727,7 +828,7 @@ This is why  when not working for Imperium, I'm a funded derivatives prop trader
                         <div class="project-overlay">🔗 View Code</div>
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title"></h3> SQL + DATA</h3>
+                        <h3 class="project-title">SQL + DATA</h3>
                         <p class="project-description">This repository demonstrates practical applications of SQL and Python for data analysis, visualization, and dashboard creation across different domains like banking, real estate, and salary data.</p>
                         <div class="project-tech">
                             <span class="tech-tag">Python</span>
@@ -759,7 +860,7 @@ This is why  when not working for Imperium, I'm a funded derivatives prop trader
                         <div class="project-overlay">🔗 View Code</div>
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">AWS </h3>
+                        <h3 class="project-title">AWS</h3>
                         <p class="project-description">Some projects include scalable data lake implementation using AWS Glue, S3, and Athena for analytics workloads.</p>
                         <div class="project-tech">
                             <span class="tech-tag">AWS</span>
@@ -776,16 +877,13 @@ This is why  when not working for Imperium, I'm a funded derivatives prop trader
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">Quantitative</h3>
-                        <p class="project-description">High-performance data processing pipelines, backtests and Quant Analysis tools. </p>
+                        <p class="project-description">High-performance data processing pipelines, backtests and Quant Analysis tools.</p>
                         <div class="project-tech">
                             <span class="tech-tag">Python</span>
                             <span class="tech-tag">SQL</span>
                             <span class="tech-tag">Yfinance</span>
                         </div>
                     </div>
-                </a>
-                
-                
                 </a>
             </div>
         </div>
@@ -801,7 +899,11 @@ This is why  when not working for Imperium, I'm a funded derivatives prop trader
             <div class="contact-info">
                 <div class="contact-item fade-in">
                    
-                    <span>wolfranknyc@gmail.com</span>
+                    <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="394e56555f4b58575257405a795e54585055175a5654">[email&#160;protected]</a></span>
                 </div>
               
-            </html>
+            <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+        </div>
+    </section>
+</body>
+</html>
